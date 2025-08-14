@@ -4,395 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innova Diagnostica</title>
-    <style>
-        /* Mobile-first approach with enhanced aesthetics */
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f5f5f5;
-            color: #333;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        .header {
-            background: linear-gradient(135deg, #d3d3d3, #e0e0e0);
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .logo {
-            width: 50px;
-            height: 50px;
-            background-color: #808080;
-            border-radius: 50%;
-            background-image: url('logo-placeholder.jpg');
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.3s ease;
-        }
-        .logo:hover {
-            transform: scale(1.1);
-        }
-        .nav {
-            display: flex;
-            gap: 15px;
-            margin: 10px 0;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #444;
-            font-weight: 600;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .nav a:hover {
-            background-color: #808080;
-            color: #fff;
-        }
-        .contact-info {
-            font-size: 0.9em;
-            color: #666;
-        }
-        .title {
-            margin: 20px 0;
-            font-size: 1.5em;
-            color: #2c3e50;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: slideInLeft 1s ease-out;
-        }
-        .subtitle {
-            color: #7f8c8d;
-            margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
-            height: 50px;
-            font-style: italic;
-            animation: fadeIn 1.5s ease-in;
-        }
-        .slideshow {
-            white-space: nowrap;
-            transition: transform 1s ease;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        .slide-text {
-            display: inline-block;
-            width: 100%;
-            vertical-align: middle;
-            white-space: normal;
-            padding: 10px;
-            color: #34495e;
-        }
-        .dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin: 10px 0;
-        }
-        .dot {
-            width: 10px;
-            height: 10px;
-            background-color: #bdc3c7;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .dot:hover, .dot.active {
-            background-color: #3498db;
-            transform: scale(1.2);
-        }
-        .services {
-            background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            animation: slideInUp 1s ease-out;
-        }
-        .services h2 {
-            margin: 0;
-            font-size: 1.2em;
-            color: #2c3e50;
-        }
-        .cards {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 0;
-        }
-        .card {
-            background: #fff;
-            width: 90%;
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            animation: fadeIn 2s ease-in;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-        .card .circle {
-            width: 80px;
-            height: 80px;
-            background-image: url('icon-placeholder.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            margin: 0 auto 10px;
-            border: 2px solid #3498db;
-            animation: rotateIn 1s ease-in;
-            transition: border-color 0.3s;
-        }
-        .card .circle:hover {
-            border-color: #e74c3c;
-        }
-        .card-content {
-            color: #7f8c8d;
-        }
-        .advantages {
-            margin-bottom: 15px;
-            animation: slideInRight 1s ease-out;
-        }
-        .advantages h2 {
-            margin: 0;
-            font-size: 1.2em;
-            color: #2c3e50;
-        }
-        .advantage-cards {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 0;
-        }
-        .advantage-card {
-            background: #fff url('advantage-placeholder.jpg') no-repeat center;
-            background-size: cover;
-            width: 90%;
-            height: 150px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            animation: bounceIn 1.5s ease-in;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .advantage-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-        .png-apparatus {
-            margin: 20px 0;
-            overflow: hidden;
-            animation: fadeIn 1.5s ease-in;
-        }
-        .slider-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            animation: slideIn 0.5s ease-out;
-        }
-        .slide .image {
-            background: #fff url('apparatus-placeholder.jpg') no-repeat center;
-            background-size: cover;
-            width: 90%;
-            height: 150px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .slide .image:hover {
-            transform: rotateY(10deg);
-        }
-        .slide .text {
-            font-size: 1.1em;
-            color: #34495e;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 600;
-        }
-        .arrow {
-            font-size: 1.5em;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            color: #3498db;
-            transition: color 0.3s, transform 0.3s;
-        }
-        .arrow.left {
-            left: 10px;
-        }
-        .arrow.right {
-            right: 10px;
-        }
-        .arrow:hover {
-            color: #e74c3c;
-            transform: scale(1.2);
-        }
-        .footer {
-            background: linear-gradient(135deg, #e0e0e0, #d3d3d3);
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            border-top: 1px solid #ccc;
-            animation: slideInUp 2s ease-out;
-        }
-        .footer .map {
-            width: 90%;
-            height: 200px;
-            border-radius: 10px;
-            overflow: hidden;
-            animation: fadeIn 2s ease-in;
-        }
-        .footer .socials {
-            display: flex;
-            gap: 15px;
-        }
-        .footer .social {
-            background: #fff url('social-placeholder.jpg') no-repeat center;
-            background-size: cover;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            transition: transform 0.3s;
-        }
-        .footer .social:hover {
-            transform: rotate(360deg) scale(1.1);
-        }
-        .footer .contacts {
-            text-align: center;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .schedule {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #7f8c8d;
-        }
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-        @keyframes slideInUp {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-        @keyframes rotateIn {
-            from { transform: rotate(-180deg); opacity: 0; }
-            to { transform: rotate(0); opacity: 1; }
-        }
-        @keyframes bounceIn {
-            0% { opacity: 0; transform: scale(0.3); }
-            50% { opacity: 1; transform: scale(1.05); }
-            70% { transform: scale(0.9); }
-            100% { transform: scale(1); }
-        }
-        @keyframes slideIn {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-        /* Desktop styles */
-        @media (min-width: 768px) {
-            .header {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 15px 30px;
-            }
-            .nav {
-                gap: 25px;
-            }
-            .title {
-                font-size: 2.5em;
-            }
-            .cards {
-                flex-direction: row;
-                justify-content: center;
-            }
-            .card {
-                width: 200px;
-            }
-            .advantage-cards {
-                flex-direction: row;
-                justify-content: center;
-            }
-            .advantage-card {
-                width: 200px;
-                height: 200px;
-            }
-            .slide {
-                flex-direction: row;
-                justify-content: center;
-                gap: 20px;
-            }
-            .slide .image {
-                width: 300px;
-                height: 200px;
-            }
-            .slide .text {
-                flex-direction: row;
-            }
-            .footer {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 15px 30px;
-            }
-            .footer .map {
-                width: 50%;
-                height: 300px;
-            }
-            .footer .socials {
-                margin: 0;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
-        <div class="logo"></div>
-        <div class="nav">
-            <a href="#">О нас</a>
-            <a href="#">Прайс</a>
-            <a href="#">Врачи</a>
-        </div>
+        <img class="logo" src="/images/logo.jpg" alt="Innova Diagnostica Logo">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a href="#" tabindex="0">О нас</a>
+            <a href="#" tabindex="0">Прайс</a>
+            <a href="#" tabindex="0">Врачи</a>
+        </nav>
         <div class="contact-info">+380800757500</div>
     </div>
     <div class="title">innova diagnostica</div>
@@ -403,32 +25,32 @@
             <div class="slide-text">Сокращенно о нас (на фоне слайдшоу из картинок) 3</div>
         </div>
     </div>
-    <div class="dots" id="dots">
-        <div class="dot" onclick="currentSlide(0)"></div>
-        <div class="dot" onclick="currentSlide(1)"></div>
-        <div class="dot" onclick="currentSlide(2)"></div>
+    <div class="dots" id="dots" role="tablist" aria-label="Slideshow navigation">
+        <div class="dot" onclick="currentSlide(0)" role="tab" aria-label="Slide 1" tabindex="0"></div>
+        <div class="dot" onclick="currentSlide(1)" role="tab" aria-label="Slide 2" tabindex="0"></div>
+        <div class="dot" onclick="currentSlide(2)" role="tab" aria-label="Slide 3" tabindex="0"></div>
     </div>
     <div class="services">
         <h2>Узнать подробнее</h2>
     </div>
     <div class="cards">
         <div class="card">
-            <div class="circle"></div>
+            <img src="/images/service1.jpg" alt="Service 1 Icon">
             <div class="card-content">Название</div>
             <div class="card-content">Текст</div>
         </div>
         <div class="card">
-            <div class="circle"></div>
+            <img src="/images/service2.jpg" alt="Service 2 Icon">
             <div class="card-content">Название</div>
             <div class="card-content">Текст</div>
         </div>
         <div class="card">
-            <div class="circle"></div>
+            <img src="/images/service3.jpg" alt="Service 3 Icon">
             <div class="card-content">Название</div>
             <div class="card-content">Текст</div>
         </div>
         <div class="card">
-            <div class="circle"></div>
+            <img src="/images/service4.jpg" alt="Service 4 Icon">
             <div class="card-content">Название</div>
             <div class="card-content">Текст</div>
         </div>
@@ -437,45 +59,76 @@
         <h2>Услуги</h2>
     </div>
     <div class="advantage-cards">
-        <div class="advantage-card"></div>
-        <div class="advantage-card"></div>
-        <div class="advantage-card"></div>
+        <div class="advantage-card">
+            <img src="/images/advantage1.jpg" alt="Service Image 1">
+        </div>
+        <div class="advantage-card">
+            <img src="/images/advantage2.jpg" alt="Service Image 2">
+        </div>
+        <div class="advantage-card">
+            <img src="/images/advantage3.jpg" alt="Service Image 3">
+        </div>
     </div>
     <div class="advantages">
         <h2>Преимущества</h2>
     </div>
     <div class="advantage-cards">
-        <div class="advantage-card"></div>
-        <div class="advantage-card"></div>
-        <div class="advantage-card"></div>
+        <div class="advantage-card">
+            <img src="/images/benefit1.jpg" alt="Advantage Image 1">
+        </div>
+        <div class="advantage-card">
+            <img src="/images/benefit2.jpg" alt="Advantage Image 2">
+        </div>
+        <div class="advantage-card">
+            <img src="/images/benefit3.jpg" alt="Advantage Image 3">
+        </div>
     </div>
     <div class="png-apparatus">
         <div class="slider-container">
-            <div class="arrow left" onclick="plusSlides(-1)">&#10094;</div>
+            <div class="arrow left" onclick="plusSlidesApparatus(-1)" role="button" aria-label="Previous slide" tabindex="0">&#10094;</div>
             <div class="slider" id="apparatus-slider">
                 <div class="slide">
-                    <div class="image"></div>
+                    <img src="/images/apparatus1.jpg" alt="Apparatus Image 1">
                     <div class="text">Название 1 > Описание 1</div>
                 </div>
                 <div class="slide">
-                    <div class="image"></div>
+                    <img src="/images/apparatus2.jpg" alt="Apparatus Image 2">
                     <div class="text">Название 2 > Описание 2</div>
                 </div>
                 <div class="slide">
-                    <div class="image"></div>
+                    <img src="/images/apparatus3.jpg" alt="Apparatus Image 3">
                     <div class="text">Название 3 > Описание 3</div>
                 </div>
             </div>
-            <div class="arrow right" onclick="plusSlides(1)">&#10095;</div>
+            <div class="arrow right" onclick="plusSlidesApparatus(1)" role="button" aria-label="Next slide" tabindex="0">&#10095;</div>
         </div>
     </div>
     <div class="footer">
-        <div class="map"></div>
+        <div class="map" id="map" role="region" aria-label="Location map"></div>
         <div class="socials">
-            <div class="social"><a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" style="color:black; text-decoration:none;">Insta</a></div>
+            <div class="social instagram">
+                <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
+                    <img src="/images/instagram.jpg" alt="Instagram Icon">
+                </a>
+            </div>
+            <div class="social facebook">
+                <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
+                    <img src="/images/facebook.jpg" alt="Facebook Icon">
+                </a>
+            </div>
+            <div class="social viber">
+                <a href="viber://chat?number=+380507814960" aria-label="Viber">
+                    <img src="/images/viber.jpg" alt="Viber Icon">
+                </a>
+            </div>
+            <div class="social telegram">
+                <a href="https://t.me/+380507814960" aria-label="Telegram">
+                    <img src="/images/telegram.jpg" alt="Telegram Icon">
+                </a>
+            </div>
         </div>
         <div class="contacts">
-            Телефоны: +380800757500, +380970693904, +380507814960 (Viber, Telegram)
+            Телефоны: +380800757500, +380970693904, +380507814960 (Viber, Telegram)<br>
             <div class="schedule">
                 Графік роботи:<br>
                 Пн-Пт: 08:30 - 20:00<br>
@@ -483,61 +136,9 @@
             </div>
         </div>
     </div>
-    <script>
-        let slideIndex = 0;
-        let apparatusIndex = 0;
-        const slideshow = document.getElementById("slideshow");
-        const slideTexts = document.getElementsByClassName("slide-text");
-        const dots = document.getElementById("dots").getElementsByClassName("dot");
-        const apparatusSlider = document.getElementById("apparatus-slider");
-        const apparatusSlides = document.getElementsByClassName("slide");
-        let slideInterval;
-
-        function showSlides() {
-            slideIndex++;
-            if (slideIndex >= slideTexts.length) { slideIndex = 0; }
-            slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
-            updateDots();
-        }
-
-        function currentSlide(n) {
-            slideIndex = n;
-            slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
-            updateDots();
-            clearInterval(slideInterval);
-            slideInterval = setInterval(showSlides, 3000);
-        }
-
-        function updateDots() {
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            dots[slideIndex].className += " active";
-        }
-
-        function plusSlides(n) {
-            apparatusIndex += n;
-            if (apparatusIndex >= apparatusSlides.length) { apparatusIndex = 0; }
-            if (apparatusIndex < 0) { apparatusIndex = apparatusSlides.length - 1; }
-            apparatusSlider.style.transform = `translateX(-${apparatusIndex * 100}%)`;
-        }
-
-        slideInterval = setInterval(showSlides, 3000);
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfCsZ6Rd0ibjqFDCA1BNzgtZThrUvxXrY&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            const location = { lat: 46.480751, lng: 30.732374 }; // Coordinates for Велика Арнаутська, 2А, Odessa
-            const map = new google.maps.Map(document.querySelector('.map'), {
-                center: location,
-                zoom: 15,
-            });
-            new google.maps.Marker({
-                position: location,
-                map: map,
-                title: "Innova Diagnostica"
-            });
-        }
-    </script>
+    <!-- Подключение Leaflet CSS и JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
