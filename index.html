@@ -4,140 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innova Diagnostica</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
-    <div class="header">
-        <img class="logo" src="/images/logo.jpg" alt="Innova Diagnostica Logo">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-            <a href="#" tabindex="0">О нас</a>
-            <a href="#" tabindex="0">Прайс</a>
-            <a href="#" tabindex="0">Врачи</a>
-        </nav>
-        <div class="contact-info">+380800757500</div>
-    </div>
-    <div class="title">innova diagnostica</div>
-    <div class="subtitle">
-        <div class="slideshow" id="slideshow">
-            <div class="slide-text">Сокращенно о нас (на фоне слайдшоу из картинок) 1</div>
-            <div class="slide-text">Сокращенно о нас (на фоне слайдшоу из картинок) 2</div>
-            <div class="slide-text">Сокращенно о нас (на фоне слайдшоу из картинок) 3</div>
+    <header class="header">
+        <div class="header-content">
+            <img class="logo" src="logo.png" alt="Innova Diagnostica Logo" onerror="this.src='fallback.jpg'">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="#" tabindex="0">О нас</a>
+                <a href="#" tabindex="0">Прайс</a>
+                <a href="#" tabindex="0">Врачи</a>
+            </nav>
+        </div>
+        <div class="contact-info">+38 080 075 7500</div>
+    </header>
+
+    <div class="title">Innova Diagnostica</div>
+
+    <div class="slideshow" id="slideshow">
+        <div class="slide">
+            <img src="33.jpg" alt="Передовые технологии диагностики" onerror="this.src='fallback.jpg'">
+            <div class="slide-caption">Передовые технологии диагностики</div>
+        </div>
+        <div class="slide">
+            <img src="41.jpg" alt="Профессиональная команда врачей" onerror="this.src='fallback.jpg'">
+            <div class="slide-caption">Профессиональная команда врачей</div>
+        </div>
+        <div class="slide">
+            <img src="IMG_2231.jpeg" alt="Комфорт и забота о пациенте" onerror="this.src='fallback.jpg'">
+            <div class="slide-caption">Комфорт и забота о пациенте</div>
         </div>
     </div>
-    <div class="dots" id="dots" role="tablist" aria-label="Slideshow navigation">
-        <div class="dot" onclick="currentSlide(0)" role="tab" aria-label="Slide 1" tabindex="0"></div>
-        <div class="dot" onclick="currentSlide(1)" role="tab" aria-label="Slide 2" tabindex="0"></div>
-        <div class="dot" onclick="currentSlide(2)" role="tab" aria-label="Slide 3" tabindex="0"></div>
+
+    <div class="dots" id="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
     </div>
+
     <div class="services">
         <h2>Узнать подробнее</h2>
+        <p>Получите консультацию по нашим услугам и запишитесь на диагностику.</p>
     </div>
-    <div class="cards">
-        <div class="card">
-            <img src="/images/service1.jpg" alt="Service 1 Icon">
-            <div class="card-content">Название</div>
-            <div class="card-content">Текст</div>
-        </div>
-        <div class="card">
-            <img src="/images/service2.jpg" alt="Service 2 Icon">
-            <div class="card-content">Название</div>
-            <div class="card-content">Текст</div>
-        </div>
-        <div class="card">
-            <img src="/images/service3.jpg" alt="Service 3 Icon">
-            <div class="card-content">Название</div>
-            <div class="card-content">Текст</div>
-        </div>
-        <div class="card">
-            <img src="/images/service4.jpg" alt="Service 4 Icon">
-            <div class="card-content">Название</div>
-            <div class="card-content">Текст</div>
-        </div>
-    </div>
+
     <div class="advantages">
         <h2>Услуги</h2>
     </div>
+
     <div class="advantage-cards">
         <div class="advantage-card">
-            <img src="/images/advantage1.jpg" alt="Service Image 1">
+            <h3>Компьютерная томография</h3>
+            <img src="kt.jpg" alt="CT Machine" onerror="this.src='fallback.jpg'">
         </div>
         <div class="advantage-card">
-            <img src="/images/advantage2.jpg" alt="Service Image 2">
+            <h3>МРТ</h3>
+            <img src="mrt.jpg" alt="MRI Machine" onerror="this.src='fallback.jpg'">
         </div>
         <div class="advantage-card">
-            <img src="/images/advantage3.jpg" alt="Service Image 3">
+            <h3>КТ с врачом</h3>
+            <img src="41.jpg" alt="КТ с врачом" onerror="this.src='fallback.jpg'">
         </div>
     </div>
+
     <div class="advantages">
         <h2>Преимущества</h2>
     </div>
+
     <div class="advantage-cards">
         <div class="advantage-card">
-            <img src="/images/benefit1.jpg" alt="Advantage Image 1">
+            <h3>КТ с врачом</h3>
+            <img src="41.jpg" alt="CT Scan with Doctor" onerror="this.src='fallback.jpg'">
         </div>
         <div class="advantage-card">
-            <img src="/images/benefit2.jpg" alt="Advantage Image 2">
+            <h3>Контрольная комната</h3>
+            <img src="1010215.jpg" alt="Control Room" onerror="this.src='fallback.jpg'">
         </div>
         <div class="advantage-card">
-            <img src="/images/benefit3.jpg" alt="Advantage Image 3">
+            <h3>Врач за рабочей станцией</h3>
+            <img src="IMG_2284.jpeg" alt="Doctor at Workstation" onerror="this.src='fallback.jpg'">
         </div>
     </div>
+
     <div class="png-apparatus">
         <div class="slider-container">
-            <div class="arrow left" onclick="plusSlidesApparatus(-1)" role="button" aria-label="Previous slide" tabindex="0">&#10094;</div>
+            <button class="arrow left" onclick="plusSlidesApparatus(-1)" aria-label="Previous slide" tabindex="0">❮</button>
             <div class="slider" id="apparatus-slider">
-                <div class="slide">
-                    <img src="/images/apparatus1.jpg" alt="Apparatus Image 1">
-                    <div class="text">Название 1 > Описание 1</div>
+                <div class="apparatus-slide">
+                    <h3>Компьютерная томография</h3>
+                    <img src="kt.jpg" alt="CT Machine" onerror="this.src='fallback.jpg'">
+                    <div class="text">
+                        Компьютерная томография &gt; Высокоточный метод рентгенологического исследования, который позволяет получать послойные изображения внутренних органов и тканей.
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="/images/apparatus2.jpg" alt="Apparatus Image 2">
-                    <div class="text">Название 2 > Описание 2</div>
+                <div class="apparatus-slide">
+                    <h3>Магнитно-резонансная томография (МРТ)</h3>
+                    <img src="mrt.jpg" alt="MRI Machine" onerror="this.src='fallback.jpg'">
+                    <div class="text">
+                        МРТ &gt; Метод исследования внутренних органов и тканей с помощью магнитного поля и радиоволн, позволяющий получать детальные изображения без рентгеновского излучения.
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="/images/apparatus3.jpg" alt="Apparatus Image 3">
-                    <div class="text">Название 3 > Описание 3</div>
+                <div class="apparatus-slide">
+                    <h3>Компьютерная томография с врачом</h3>
+                    <img src="41.jpg" alt="CT Scan with Doctor" onerror="this.src='fallback.jpg'">
+                    <div class="text">
+                        КТ с врачом &gt; Исследование внутренних органов с помощью рентгеновских лучей, позволяющее врачу точно оценить состояние пациента и поставить диагноз.
+                    </div>
                 </div>
             </div>
-            <div class="arrow right" onclick="plusSlidesApparatus(1)" role="button" aria-label="Next slide" tabindex="0">&#10095;</div>
+            <button class="arrow right" onclick="plusSlidesApparatus(1)" aria-label="Next slide" tabindex="0">❯</button>
         </div>
     </div>
-    <div class="footer">
-        <div class="map" id="map" role="region" aria-label="Location map"></div>
-        <div class="socials">
-            <div class="social instagram">
-                <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
-                    <img src="/images/instagram.jpg" alt="Instagram Icon">
-                </a>
+
+    <footer class="footer">
+        <div class="footer-map">
+            <div class="map" id="map" role="region" aria-label="Location map"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <div class="social instagram">
+                    <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
+                        <img src="icons8-instagram-50.png" alt="Instagram Icon" title="Instagram" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social facebook">
+                    <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
+                        <img src="icons8-facebook-50.png" alt="Facebook Icon" title="Facebook" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social viber">
+                    <a href="viber://chat?number=+380507814960" aria-label="Viber">
+                        <img src="icons8-viber-50.png" alt="Viber Icon" title="Viber" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social telegram">
+                    <a href="https://t.me/+380507814960" aria-label="Telegram">
+                        <img src="icons8-telegram-50.png" alt="Telegram Icon" title="Telegram" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
             </div>
-            <div class="social facebook">
-                <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
-                    <img src="/images/facebook.jpg" alt="Facebook Icon">
-                </a>
-            </div>
-            <div class="social viber">
-                <a href="viber://chat?number=+380507814960" aria-label="Viber">
-                    <img src="/images/viber.jpg" alt="Viber Icon">
-                </a>
-            </div>
-            <div class="social telegram">
-                <a href="https://t.me/+380507814960" aria-label="Telegram">
-                    <img src="/images/telegram.jpg" alt="Telegram Icon">
-                </a>
+            <div class="footer-contacts">
+                <p>Телефоны: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                <div class="schedule">
+                    Графік роботи:<br>
+                    Пн-Пт: 08:30 - 20:00<br>
+                    Сб: 08:30 - 18:00
+                </div>
             </div>
         </div>
-        <div class="contacts">
-            Телефоны: +380800757500, +380970693904, +380507814960 (Viber, Telegram)<br>
-            <div class="schedule">
-                Графік роботи:<br>
-                Пн-Пт: 08:30 - 20:00<br>
-                Сб: 08:30 - 18:00
-            </div>
-        </div>
-    </div>
-    <!-- Подключение Leaflet CSS и JS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    </footer>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="main.js"></script>
 </body>

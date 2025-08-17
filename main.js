@@ -1,40 +1,62 @@
+// ===== Главный слайдер =====
 let slideIndex = 0;
-let apparatusIndex = 0;
-const slideshow = document.getElementById("slideshow");
-const slideTexts = document.getElementsByClassName("slide-text");
-const dots = document.getElementById("dots").getElementsByClassName("dot");
-const apparatusSlider = document.getElementById("apparatus-slider");
-const apparatusSlides = document.getElementsByClassName("slide");
+const slides = document.querySelectorAll(".slideshow .slide");
+const dots = document.querySelectorAll(".dot");
 let slideInterval;
 
-function showSlides() {
-    slideIndex = (slideIndex + 1) % slideTexts.length;
-    slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
-    updateDots();
+function showSlide(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+
+    slides.forEach(slide => {
+        slide.style.display = "none";
+        slide.classList.remove("fade-in");
+    });
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[slideIndex].style.display = "flex";
+    slides[slideIndex].classList.add("fade-in"); // добавляем класс анимации
+    dots[slideIndex].classList.add("active");
+}
+
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
 }
 
 function currentSlide(n) {
-    slideIndex = n >= 0 && n < slideTexts.length ? n : 0;
-    slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
-    updateDots();
-    clearInterval(slideInterval);
-    slideInterval = setInterval(showSlides, 3000);
+    slideIndex = n;
+    showSlide(slideIndex);
+    resetSlideInterval();
 }
 
-function updateDots() {
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-        if (i === slideIndex) dots[i].className += " active";
-    }
+function resetSlideInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 4000);
+}
+
+// ===== Слайдер аппаратуры =====
+let apparatusIndex = 0;
+const apparatusSlider = document.getElementById("apparatus-slider");
+const apparatusSlides = document.querySelectorAll("#apparatus-slider .apparatus-slide");
+
+function showApparatusSlide(n) {
+    if (n >= apparatusSlides.length) apparatusIndex = 0;
+    else if (n < 0) apparatusIndex = apparatusSlides.length - 1;
+    else apparatusIndex = n;
+
+    const offset = -apparatusIndex * 100;
+    apparatusSlider.style.transform = `translateX(${offset}%)`;
+    apparatusSlider.style.transition = 'transform 0.5s ease-in-out';
 }
 
 function plusSlidesApparatus(n) {
-    apparatusIndex = (apparatusIndex + n + apparatusSlides.length) % apparatusSlides.length;
-    apparatusSlider.style.transform = `translateX(-${apparatusIndex * 100}%)`;
+    showApparatusSlide(apparatusIndex + n);
 }
 
-// Инициализация карты с Leaflet
-document.addEventListener("DOMContentLoaded", function() {
+// ===== Инициализация карты Leaflet =====
+function initMap() {
     const map = L.map('map').setView([46.480751, 30.732374], 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -43,18 +65,39 @@ document.addEventListener("DOMContentLoaded", function() {
     L.marker([46.480751, 30.732374]).addTo(map)
         .bindPopup('Innova Diagnostica')
         .openPopup();
+}
+
+// ===== Инициализация всего =====
+document.addEventListener("DOMContentLoaded", function() {
+    // Главный слайдер
+    showSlide(slideIndex);
+    slideInterval = setInterval(nextSlide, 4000);
+
+    // Слайдер аппаратуры
+    showApparatusSlide(apparatusIndex);
+
+    // Карта
+    initMap();
+
+    // Пауза автослайдера при наведении
+    const slideshowContainer = document.getElementById("slideshow");
+    slideshowContainer.addEventListener("mouseenter", () => clearInterval(slideInterval));
+    slideshowContainer.addEventListener("mouseleave", resetSlideInterval);
 });
 
-// Автоматическое переключение слайдов
-slideInterval = setInterval(showSlides, 3000);
+// ===== Клавиатурная доступность для точек =====
+dots.forEach(dot => {
+    dot.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            dot.click();
+        }
+    });
+});
 
-// Остановка/возобновление автопрокрутки при наведении
-slideshow.parentElement.addEventListener('mouseenter', () => clearInterval(slideInterval));
-slideshow.parentElement.addEventListener('mouseleave', () => { slideInterval = setInterval(showSlides, 3000); });
-
-// Клавиатурная навигация для точек
-document.querySelectorAll('.dot').forEach(elem => {
-    elem.addEventListener('keydown', (e) => {
+// ===== Клавиатурная доступность для стрелок слайдера аппаратуры =====
+document.querySelectorAll('.arrow').forEach(elem => {
+    elem.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             elem.click();
