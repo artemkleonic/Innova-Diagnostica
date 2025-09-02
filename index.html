@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innova Diagnostica</title>
+    <title>Іннова Діагностика</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,113 +12,97 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <img class="logo" src="logo.png" alt="Innova Diagnostica Logo" onerror="this.src='fallback.jpg'">
+            <div class="logo-container">
+                <img class="logo" src="logo.png" alt="Innova Diagnostica Logo" onerror="this.src='fallback.jpg'">
+                <div class="logo-text">
+                    <span class="logo-subtitle">сучасний діагностичний центр</span>
+                    <span class="logo-title">ІННОВА ДІАГНОСТИКА</span>
+                </div>
+            </div>
             <nav class="nav" role="navigation" aria-label="Main navigation">
-                <a href="#" tabindex="0">О нас</a>
-                <a href="#" tabindex="0">Прайс</a>
-                <a href="#" tabindex="0">Врачи</a>
+                <a href="index.html" tabindex="0">Головна</a>
+                <a href="price.html" tabindex="0">Прайс</a>
+                <a href="doctors.html" tabindex="0">Лікарі</a>
+                <a href="ct.html" tabindex="0">КТ</a>
+                <a href="mrt.html" tabindex="0">МРТ</a>
             </nav>
         </div>
-        <div class="contact-info">+38 080 075 7500</div>
+        <div class="contact-info">
+            <p>+38 080 075 7500</p>
+            <p>+38 097 069 3904</p>
+            <p>+38 050 781 4960</p>
+            <p>м. Одеса, Велика Арнаутська, 2А</p>
+        </div>
     </header>
 
-    <div class="title">Innova Diagnostica</div>
-
     <div class="slideshow" id="slideshow">
-        <div class="slide">
-            <img src="33.jpg" alt="Передовые технологии диагностики" onerror="this.src='fallback.jpg'">
-            <div class="slide-caption">Передовые технологии диагностики</div>
+        <div class="slide fade-in">
+            <img src="33.jpg" alt="Slide 1" onerror="this.src='fallback.jpg'">
+            <div class="slide-caption">Експертний рівень</div>
         </div>
         <div class="slide">
-            <img src="41.jpg" alt="Профессиональная команда врачей" onerror="this.src='fallback.jpg'">
-            <div class="slide-caption">Профессиональная команда врачей</div>
+            <img src="41.jpg" alt="Slide 2" onerror="this.src='fallback.jpg'">
+            <div class="slide-caption">Весь спектр КТ і МРТ досліджень</div>
         </div>
         <div class="slide">
-            <img src="IMG_2231.jpeg" alt="Комфорт и забота о пациенте" onerror="this.src='fallback.jpg'">
-            <div class="slide-caption">Комфорт и забота о пациенте</div>
+            <img src="IMG_2231.jpeg" alt="Slide 3" onerror="this.src='fallback.jpg'">
+            <div class="slide-caption">Індивідуальний підхід</div>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)" tabindex="0"></span>
+            <span class="dot" onclick="currentSlide(1)" tabindex="0"></span>
+            <span class="dot" onclick="currentSlide(2)" tabindex="0"></span>
         </div>
     </div>
 
-    <div class="dots" id="dots">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+    <div class="center-description">
+        <h2>Про нас</h2>
+        <p>Іннова Діагностика – це сучасний діагностичний центр в Одесі, оснащений найновішим обладнанням для комп'ютерної та магнітно-резонансної томографії. Наші фахівці забезпечують точну діагностику та індивідуальний підхід до кожного клієнта.</p>
+        <a href="about.html" class="btn">Детальніше</a>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">5 000+ досліджень щороку</div>
+        <div class="stat-item">50+ спеціалізованих програм КТ та МРТ</div>
+        <div class="stat-item">15+ висококваліфікованих фахівців</div>
     </div>
 
     <div class="services">
-        <h2>Узнать подробнее</h2>
-        <p>Получите консультацию по нашим услугам и запишитесь на диагностику.</p>
-    </div>
-
-    <div class="advantages">
-        <h2>Услуги</h2>
-    </div>
-
-    <div class="advantage-cards">
-        <div class="advantage-card">
-            <h3>Компьютерная томография</h3>
-            <img src="kt.jpg" alt="CT Machine" onerror="this.src='fallback.jpg'">
-        </div>
-        <div class="advantage-card">
-            <h3>МРТ</h3>
-            <img src="mrt.jpg" alt="MRI Machine" onerror="this.src='fallback.jpg'">
-        </div>
-        <div class="advantage-card">
-            <h3>КТ с врачом</h3>
-            <img src="41.jpg" alt="КТ с врачом" onerror="this.src='fallback.jpg'">
+        <h2>Наші послуги</h2>
+        <div class="service-cards">
+            <a href="ct.html" class="service-card">
+                <img src="icons8-ct-scan-100.png" alt="CT Scan Icon" onerror="this.src='fallback.jpg'">
+                <h3>Комп'ютерна томографія</h3>
+            </a>
+            <a href="mrt.html" class="service-card">
+                <img src="icons8-mri-100.png" alt="MRI Icon" onerror="this.src='fallback.jpg'">
+                <h3>МРТ</h3>
+            </a>
         </div>
     </div>
 
-    <div class="advantages">
-        <h2>Преимущества</h2>
-    </div>
-
-    <div class="advantage-cards">
-        <div class="advantage-card">
-            <h3>КТ с врачом</h3>
-            <img src="41.jpg" alt="CT Scan with Doctor" onerror="this.src='fallback.jpg'">
-        </div>
-        <div class="advantage-card">
-            <h3>Контрольная комната</h3>
-            <img src="1010215.jpg" alt="Control Room" onerror="this.src='fallback.jpg'">
-        </div>
-        <div class="advantage-card">
-            <h3>Врач за рабочей станцией</h3>
-            <img src="IMG_2284.jpeg" alt="Doctor at Workstation" onerror="this.src='fallback.jpg'">
-        </div>
-    </div>
-
-    <div class="png-apparatus">
-        <div class="slider-container">
-            <button class="arrow left" onclick="plusSlidesApparatus(-1)" aria-label="Previous slide" tabindex="0">❮</button>
-            <div class="slider" id="apparatus-slider">
-                <div class="apparatus-slide">
-                    <h3>Компьютерная томография</h3>
-                    <img src="kt.jpg" alt="CT Machine" onerror="this.src='fallback.jpg'">
-                    <div class="text">
-                        Компьютерная томография &gt; Высокоточный метод рентгенологического исследования, который позволяет получать послойные изображения внутренних органов и тканей.
-                    </div>
-                </div>
-                <div class="apparatus-slide">
-                    <h3>Магнитно-резонансная томография (МРТ)</h3>
-                    <img src="mrt.jpg" alt="MRI Machine" onerror="this.src='fallback.jpg'">
-                    <div class="text">
-                        МРТ &gt; Метод исследования внутренних органов и тканей с помощью магнитного поля и радиоволн, позволяющий получать детальные изображения без рентгеновского излучения.
-                    </div>
-                </div>
-                <div class="apparatus-slide">
-                    <h3>Компьютерная томография с врачом</h3>
-                    <img src="41.jpg" alt="CT Scan with Doctor" onerror="this.src='fallback.jpg'">
-                    <div class="text">
-                        КТ с врачом &gt; Исследование внутренних органов с помощью рентгеновских лучей, позволяющее врачу точно оценить состояние пациента и поставить диагноз.
-                    </div>
+    <div class="equipment-slider">
+        <button class="arrow left" aria-label="Previous slide" tabindex="0">❮</button>
+        <div id="equipment-slider" class="slider-wrapper">
+            <div class="equipment-slide">
+                <img src="mrt.jpg" alt="Магнітно-резонансна томографія" onerror="this.src='fallback.jpg'">
+                <div class="equipment-info">
+                    <h3>Магнітно-резонансна томографія (МРТ)</h3>
+                    <p>Метод дослідження внутрішніх органів за допомогою магнітного поля та радіохвиль...</p>
                 </div>
             </div>
-            <button class="arrow right" onclick="plusSlidesApparatus(1)" aria-label="Next slide" tabindex="0">❯</button>
+            <div class="equipment-slide">
+                <img src="kt.jpg" alt="Комп'ютерна томографія" onerror="this.src='fallback.jpg'">
+                <div class="equipment-info">
+                    <h3>Комп'ютерна томографія (КТ)</h3>
+                    <p>Високоточний метод рентгенологічного дослідження...</p>
+                </div>
+            </div>
         </div>
+        <button class="arrow right" aria-label="Next slide" tabindex="0">❯</button>
     </div>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer-map">
             <div class="map" id="map" role="region" aria-label="Location map"></div>
         </div>
@@ -146,7 +130,8 @@
                 </div>
             </div>
             <div class="footer-contacts">
-                <p>Телефоны: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
                 <div class="schedule">
                     Графік роботи:<br>
                     Пн-Пт: 08:30 - 20:00<br>

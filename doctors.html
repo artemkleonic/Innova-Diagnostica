@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лікарі - Іннова Діагностика</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="logo" src="logo.png" alt="Innova Diagnostica Logo" onerror="this.src='fallback.jpg'">
+                <div class="logo-text">
+                    <span class="logo-subtitle">сучасний діагностичний центр</span>
+                    <span class="logo-title">ІННОВА ДІАГНОСТИКА</span>
+                </div>
+            </div>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" tabindex="0">Головна</a>
+                <a href="price.html" tabindex="0">Прайс</a>
+                <a href="doctors.html" tabindex="0">Лікарі</a>
+                <a href="ct.html" tabindex="0">КТ</a>
+                <a href="mrt.html" tabindex="0">МРТ</a>
+            </nav>
+        </div>
+        <div class="contact-info">
+            <p>+38 080 075 7500</p>
+            <p>+38 097 069 3904</p>
+            <p>+38 050 781 4960</p>
+            <p>м. Одеса, Велика Арнаутська, 2А</p>
+        </div>
+    </header>
+
+    <div class="doctors">
+        <h2>Лікарі</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <img src="doctor1.jpg" alt="Таха Маріо" onerror="this.src='fallback.jpg'">
+                <h3>Таха Маріо</h3>
+                <p class="specialty">Директор центру, лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor2.jpg" alt="Мартинюк Михайло Валерійович" onerror="this.src='fallback.jpg'">
+                <h3>Мартинюк Михайло Валерійович</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor3.jpg" alt="Полюхович Альона Анатоліївна" onerror="this.src='fallback.jpg'">
+                <h3>Полюхович Альона Анатоліївна</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor4.jpg" alt="Котлярова Марина Олександрівна" onerror="this.src='fallback.jpg'">
+                <h3>Котлярова Марина Олександрівна</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor5.jpg" alt="Бондар Елеонора Леонідівна" onerror="this.src='fallback.jpg'">
+                <h3>Бондар Елеонора Леонідівна</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor6.jpg" alt="Агій Владислава Іванівна" onerror="this.src='fallback.jpg'">
+                <h3>Агій Владислава Іванівна</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor7.jpg" alt="Руденко Костянтин Олегович" onerror="this.src='fallback.jpg'">
+                <h3>Руденко Костянтин Олегович</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor8.jpg" alt="Курилов Дмитро Ігорович" onerror="this.src='fallback.jpg'">
+                <h3>Курилов Дмитро Ігорович</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+            <div class="doctor-card">
+                <img src="doctor9.jpg" alt="Кочкарьов Олексій Вікторович" onerror="this.src='fallback.jpg'">
+                <h3>Кочкарьов Олексій Вікторович</h3>
+                <p class="specialty">Лікар-радіолог</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 40px;">Лаборанти та медсестри</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <img src="staff1.jpg" alt="Марія Геращенко" onerror="this.src='fallback.jpg'">
+                <h3>Марія Геращенко</h3>
+                <p class="specialty">Лікар-інтерн, медсестра кабінету КТ</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff2.jpg" alt="Дар'я Шеін" onerror="this.src='fallback.jpg'">
+                <h3>Дар'я Шеін</h3>
+                <p class="specialty">Медична сестра</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff3.jpg" alt="Ірина Немировська" onerror="this.src='fallback.jpg'">
+                <h3>Ірина Немировська</h3>
+                <p class="specialty">Лаборант кабінету МРТ</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff4.jpg" alt="Анжела Гроздєва" onerror="this.src='fallback.jpg'">
+                <h3>Анжела Гроздєва</h3>
+                <p class="specialty">Лаборант кабінету МРТ</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff5.jpg" alt="Ірина Рексіна" onerror="this.src='fallback.jpg'">
+                <h3>Ірина Рексіна</h3>
+                <p class="specialty">Лаборант кабінету МРТ</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff6.jpg" alt="Наталія Лях" onerror="this.src='fallback.jpg'">
+                <h3>Наталія Лях</h3>
+                <p class="specialty">Медична сестра, лаборант кабінету МРТ</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff7.jpg" alt="Наталія Гоманюк" onerror="this.src='fallback.jpg'">
+                <h3>Наталія Гоманюк</h3>
+                <p class="specialty">Медична сестра, лаборант кабінету КТ</p>
+            </div>
+            <div class="doctor-card">
+                <img src="staff8.jpg" alt="Альона Талужнянська" onerror="this.src='fallback.jpg'">
+                <h3>Альона Талужнянська</h3>
+                <p class="specialty">Лаборант кабінету КТ</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 40px;">Адміністратори та представники</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <img src="admin1.jpg" alt="Катерина Скліфасовська" onerror="this.src='fallback.jpg'">
+                <h3>Катерина Скліфасовська</h3>
+                <p class="specialty">Адміністратор діагностичного центру</p>
+            </div>
+            <div class="doctor-card">
+                <img src="admin2.jpg" alt="Сергій Лашук" onerror="this.src='fallback.jpg'">
+                <h3>Сергій Лашук</h3>
+                <p class="specialty">Медичний представник діагностичного центру</p>
+            </div>
+            <div class="doctor-card">
+                <img src="admin3.jpg" alt="Тетяна Веретеннікова" onerror="this.src='fallback.jpg'">
+                <h3>Тетяна Веретеннікова</h3>
+                <p class="specialty">Адміністратор діагностичного центру</p>
+            </div>
+            <div class="doctor-card">
+                <img src="admin4.jpg" alt="Інна Антонова" onerror="this.src='fallback.jpg'">
+                <h3>Інна Антонова</h3>
+                <p class="specialty">Адміністратор діагностичного центру</p>
+            </div>
+            <div class="doctor-card">
+                <img src="admin5.jpg" alt="Тамара Квашук" onerror="this.src='fallback.jpg'">
+                <h3>Тамара Квашук</h3>
+                <p class="specialty">Адміністратор діагностичного центру</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-map">
+            <div class="map" id="map" role="region" aria-label="Location map"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <div class="social instagram">
+                    <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
+                        <img src="icons8-instagram-50.png" alt="Instagram Icon" title="Instagram" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social facebook">
+                    <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
+                        <img src="icons8-facebook-50.png" alt="Facebook Icon" title="Facebook" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social viber">
+                    <a href="viber://chat?number=+380507814960" aria-label="Viber">
+                        <img src="icons8-viber-50.png" alt="Viber Icon" title="Viber" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social telegram">
+                    <a href="https://t.me/+380507814960" aria-label="Telegram">
+                        <img src="icons8-telegram-50.png" alt="Telegram Icon" title="Telegram" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
+                <div class="schedule">
+                    Графік роботи:<br>
+                    Пн-Пт: 08:30 - 20:00<br>
+                    Сб: 08:30 - 18:00
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="main.js"></script>

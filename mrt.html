@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МРТ - Іннова Діагностика</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="logo" src="logo.png" alt="Innova Diagnostica Logo" onerror="this.src='fallback.jpg'">
+                <div class="logo-text">
+                    <span class="logo-subtitle">сучасний діагностичний центр</span>
+                    <span class="logo-title">ІННОВА ДІАГНОСТИКА</span>
+                </div>
+            </div>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" tabindex="0">Головна</a>
+                <a href="price.html" tabindex="0">Прайс</a>
+                <a href="doctors.html" tabindex="0">Лікарі</a>
+                <a href="ct.html" tabindex="0">КТ</a>
+                <a href="mrt.html" tabindex="0">МРТ</a>
+            </nav>
+        </div>
+        <div class="contact-info">
+            <p>+38 080 075 7500</p>
+            <p>+38 097 069 3904</p>
+            <p>+38 050 781 4960</p>
+            <p>м. Одеса, Велика Арнаутська, 2А</p>
+        </div>
+    </header>
+
+    <div class="mrt">
+        <h2>Магнітно-резонансна томографія (МРТ)</h2>
+        <p>МРТ томографія - сучасний діагностичний метод візуалізації, заснований на принципах магнітного резонансу ядер молекул.</p>
+        <p>Основною перевагою цього методу, з медичної точки зору, є детальне, чітке і контрастне зображення. Така візуалізація практично неможлива іншими методами. Ще одна важлива перевага - повна безпека пацієнта, оскільки під час обстеження відсутнє іонізаційне навантаження.</p>
+        <p>У нашому діагностичному центрі магнітно-резонансна томографія (МРТ) проводиться на апараті нового покоління SIEMENS MAGNETOM AMIRA (Німеччина) з потужністю магнітного поля 1.5 Т.</p>
+        <p>Ми перші в Одесі (серпень 2025р.), перейшли на найновішу передову технологію реконструкції зображень з використанням штучного інтелекту та глибокого навчання - Deep Resolve Boost, розробленою компанією Siemens Healthineers, завдяки якій значно скоротився час МРТ-досліджень, забезпечуючи комфортніші умови для пацієнтів, зберігаючи при цьому високу якість зображення.</p>
+        <h3>Проводимо:</h3>
+        <ul class="equipment-list">
+            <li>МРТ серця.</li>
+            <li>МРТ молочних залоз.</li>
+            <li>МРТ всього тіла з дифузією.</li>
+            <li>МРТ печінки з гепатоспецифічним контрастом примовіст.</li>
+            <li>МРТ під медикаментозним сном (за необхідності).</li>
+        </ul>
+        <img src="mrt-machine.jpg" alt="Сучасний апарат SIEMENS Magnetom Amira 1.5T" onerror="this.src='fallback.jpg'">
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer-map">
+            <div class="map" id="map" role="region" aria-label="Location map"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <div class="social instagram">
+                    <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
+                        <img src="icons8-instagram-50.png" alt="Instagram Icon" title="Instagram" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social facebook">
+                    <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
+                        <img src="icons8-facebook-50.png" alt="Facebook Icon" title="Facebook" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social viber">
+                    <a href="viber://chat?number=+380507814960" aria-label="Viber">
+                        <img src="icons8-viber-50.png" alt="Viber Icon" title="Viber" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+                <div class="social telegram">
+                    <a href="https://t.me/+380507814960" aria-label="Telegram">
+                        <img src="icons8-telegram-50.png" alt="Telegram Icon" title="Telegram" onerror="this.src='fallback.jpg'">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
+                <div class="schedule">
+                    Графік роботи:<br>
+                    Пн-Пт: 08:30 - 20:00<br>
+                    Сб: 08:30 - 18:00
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,24 +1,26 @@
-// ===== Главный слайдер =====
+// --- Основной слайдер ---
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slideshow .slide");
 const dots = document.querySelectorAll(".dot");
 let slideInterval;
 
 function showSlide(n) {
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
+    slideIndex = (n + slides.length) % slides.length;
 
     slides.forEach(slide => {
         slide.style.display = "none";
         slide.classList.remove("fade-in");
     });
+
     dots.forEach(dot => dot.classList.remove("active"));
 
     slides[slideIndex].style.display = "flex";
-    slides[slideIndex].classList.add("fade-in"); // добавляем класс анимации
-    dots[slideIndex].classList.add("active");
-}
+    slides[slideIndex].classList.add("fade-in");
 
+    if (dots[slideIndex]) {
+        dots[slideIndex].classList.add("active");
+    }
+}
 
 function nextSlide() {
     slideIndex++;
@@ -36,71 +38,130 @@ function resetSlideInterval() {
     slideInterval = setInterval(nextSlide, 4000);
 }
 
-// ===== Слайдер аппаратуры =====
-let apparatusIndex = 0;
-const apparatusSlider = document.getElementById("apparatus-slider");
-const apparatusSlides = document.querySelectorAll("#apparatus-slider .apparatus-slide");
+// --- Equipment Slider ---
+let equipmentIndex = 0;
+const equipmentSlider = document.getElementById("equipment-slider");
+const equipmentSlides = document.querySelectorAll(".equipment-slide");
 
-function showApparatusSlide(n) {
-    if (n >= apparatusSlides.length) apparatusIndex = 0;
-    else if (n < 0) apparatusIndex = apparatusSlides.length - 1;
-    else apparatusIndex = n;
+function showEquipmentSlide(index) {
+    if (!equipmentSlider || equipmentSlides.length === 0) {
+        console.error("Слайдер или слайды не найдены!");
+        return;
+    }
 
-    const offset = -apparatusIndex * 100;
-    apparatusSlider.style.transform = `translateX(${offset}%)`;
-    apparatusSlider.style.transition = 'transform 0.5s ease-in-out';
+    equipmentIndex = (index + equipmentSlides.length) % equipmentSlides.length;
+
+    // ширина карточки с учётом отступов
+    const slideWidth = equipmentSlides[0].offsetWidth + 20;
+    const offset = -(equipmentIndex * slideWidth);
+
+    equipmentSlider.style.transform = `translateX(${offset}px)`;
+    equipmentSlider.style.transition = "transform 0.6s ease-in-out";
 }
 
-function plusSlidesApparatus(n) {
-    showApparatusSlide(apparatusIndex + n);
+function plusSlidesEquipment(n) {
+    showEquipmentSlide(equipmentIndex + n);
 }
 
-// ===== Инициализация карты Leaflet =====
+// --- Карта ---
 function initMap() {
-    const map = L.map('map').setView([46.480751, 30.732374], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    L.marker([46.480751, 30.732374]).addTo(map)
-        .bindPopup('Innova Diagnostica')
-        .openPopup();
+    const mapElements = document.querySelectorAll(".map");
+    mapElements.forEach(mapElement => {
+        if (mapElement) {
+            const map = L.map(mapElement, { zoomControl: true }).setView([46.47120, 30.75300], 15);
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            L.marker([46.47120, 30.75300]).addTo(map)
+                .bindPopup("Іннова Діагностика, м. Одеса, Велика Арнаутська, 2А")
+                .openPopup();
+
+           setTimeout(() => {
+  map.invalidateSize();
+}, 100);
+
+        }
+    });
 }
 
-// ===== Инициализация всего =====
-document.addEventListener("DOMContentLoaded", function() {
-    // Главный слайдер
-    showSlide(slideIndex);
-    slideInterval = setInterval(nextSlide, 4000);
+// --- Аккордеон (цены) ---
+function initAccordion() {
+    const headers = document.querySelectorAll(".price h3");
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const table = header.nextElementSibling;
+            if (table && table.classList.contains("price-table")) {
+                table.classList.toggle("active");
+                header.classList.toggle("active");
+            } else {
+                let sibling = header.nextElementSibling;
+                while (sibling && !sibling.classList.contains("price-table")) {
+                    sibling = sibling.nextElementSibling;
+                }
+                if (sibling) {
+                    sibling.classList.toggle("active");
+                    header.classList.toggle("active");
+                }
+            }
+        });
+    });
+}
 
-    // Слайдер аппаратуры
-    showApparatusSlide(apparatusIndex);
+// --- Запуск ---
+document.addEventListener("DOMContentLoaded", function () {
+    // Слайдшоу
+    if (slides.length > 0) {
+        showSlide(slideIndex);
+        slideInterval = setInterval(nextSlide, 4000);
 
-    // Карта
+        const slideshowContainer = document.getElementById("slideshow");
+        if (slideshowContainer) {
+            slideshowContainer.addEventListener("mouseenter", () => clearInterval(slideInterval));
+            slideshowContainer.addEventListener("mouseleave", resetSlideInterval);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener("keydown", e => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    dot.click();
+                }
+            });
+        });
+    }
+
+    // Equipment slider
+    if (equipmentSlides.length > 0) {
+        showEquipmentSlide(0);
+
+        const leftArrow = document.querySelector(".equipment-slider .arrow.left");
+        const rightArrow = document.querySelector(".equipment-slider .arrow.right");
+
+        if (leftArrow) {
+            leftArrow.addEventListener("click", () => plusSlidesEquipment(-1));
+            leftArrow.addEventListener("keydown", e => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    leftArrow.click();
+                }
+            });
+        }
+
+        if (rightArrow) {
+            rightArrow.addEventListener("click", () => plusSlidesEquipment(1));
+            rightArrow.addEventListener("keydown", e => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    rightArrow.click();
+                }
+            });
+        }
+    } else {
+        console.error("Слайды оборудования не найдены!");
+    }
+
     initMap();
-
-    // Пауза автослайдера при наведении
-    const slideshowContainer = document.getElementById("slideshow");
-    slideshowContainer.addEventListener("mouseenter", () => clearInterval(slideInterval));
-    slideshowContainer.addEventListener("mouseleave", resetSlideInterval);
-});
-
-// ===== Клавиатурная доступность для точек =====
-dots.forEach(dot => {
-    dot.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            dot.click();
-        }
-    });
-});
-
-// ===== Клавиатурная доступность для стрелок слайдера аппаратуры =====
-document.querySelectorAll('.arrow').forEach(elem => {
-    elem.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            elem.click();
-        }
-    });
+    initAccordion();
 });
