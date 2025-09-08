@@ -263,8 +263,7 @@ nav a:hover {
 }
 
 .service-card img {
-    width: 100px;
-    height: 100px;
+    height: 273px;
     object-fit: contain;
 }
 
@@ -737,7 +736,7 @@ footer {
         height: 340px;
     }
     .service-card img {
-        height: 100px;
+        height: 250px;
     }
     .advantage-list {
         text-align: center;
