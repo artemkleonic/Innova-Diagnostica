@@ -14,8 +14,10 @@ function showSlide(n) {
 
     dots.forEach(dot => dot.classList.remove("active"));
 
-    slides[slideIndex].style.display = "flex";
-    slides[slideIndex].classList.add("fade-in");
+    if (slides[slideIndex]) {
+        slides[slideIndex].style.display = "flex";
+        slides[slideIndex].classList.add("fade-in");
+    }
 
     if (dots[slideIndex]) {
         dots[slideIndex].classList.add("active");
@@ -45,14 +47,14 @@ const equipmentSlides = document.querySelectorAll(".equipment-slide");
 
 function showEquipmentSlide(index) {
     if (!equipmentSlider || equipmentSlides.length === 0) {
-        console.error("Слайдер или слайды не найдены!");
+        console.error("Equipment slider or slides not found!");
         return;
     }
 
     equipmentIndex = (index + equipmentSlides.length) % equipmentSlides.length;
 
-    // ширина карточки с учётом отступов
-    const slideWidth = equipmentSlides[0].offsetWidth + 20;
+    // Calculate slide width including margins
+    const slideWidth = equipmentSlides[0].offsetWidth + 20; // 20px margin as per your CSS
     const offset = -(equipmentIndex * slideWidth);
 
     equipmentSlider.style.transform = `translateX(${offset}px)`;
@@ -65,25 +67,27 @@ function plusSlidesEquipment(n) {
 
 // --- Карта ---
 function initMap() {
-    const mapElements = document.querySelectorAll(".map");
-    mapElements.forEach(mapElement => {
-        if (mapElement) {
-            const map = L.map(mapElement, { zoomControl: true }).setView([46.47120, 30.75300], 15);
-            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                maxZoom: 19,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
+    const mapElement = document.getElementById("map");
+    if (mapElement) {
+        console.log("Initializing map...");
+        const map = L.map(mapElement, { zoomControl: true }).setView([46.47120, 30.75300], 15);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
 
-            L.marker([46.47120, 30.75300]).addTo(map)
-                .bindPopup("Іннова Діагностика, м. Одеса, Велика Арнаутська, 2А")
-                .openPopup();
+        L.marker([46.47120, 30.75300]).addTo(map)
+            .bindPopup("Іннова Діагностика, м. Одеса, Велика Арнаутська, 2А")
+            .openPopup();
 
-           setTimeout(() => {
-  map.invalidateSize();
-}, 100);
-
-        }
-    });
+        // Ensure the map resizes correctly after loading
+        setTimeout(() => {
+            map.invalidateSize();
+            console.log("Map size invalidated");
+        }, 100);
+    } else {
+        console.error("Map element not found!");
+    }
 }
 
 // --- Аккордеон (цены) ---
@@ -111,7 +115,7 @@ function initAccordion() {
 
 // --- Запуск ---
 document.addEventListener("DOMContentLoaded", function () {
-    // Слайдшоу
+    // Slideshow
     if (slides.length > 0) {
         showSlide(slideIndex);
         slideInterval = setInterval(nextSlide, 4000);
@@ -130,6 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+    } else {
+        console.warn("No slideshow slides found, skipping slideshow initialization.");
     }
 
     // Equipment slider
@@ -159,9 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     } else {
-        console.error("Слайды оборудования не найдены!");
+        console.warn("No equipment slides found, skipping equipment slider initialization.");
     }
 
-    initMap();
-    initAccordion();
+    initMap(); // Initialize map
+    initAccordion(); // Initialize accordion
 });

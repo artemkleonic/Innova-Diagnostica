@@ -7,7 +7,11 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Добавляем это -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-content">
@@ -54,7 +58,7 @@
             <li>КТ - ентероколонографія.</li>
             <li>Онкологічний протокол.</li>
         </ul>
-        <img src="ct-machine.jpg" alt="Сучасний 64-зрізовий SIEMENS Somatom go. Up" onerror="this.src='fallback.jpg'">
+        <img class="ct-machine" src="ct-machine.jpg" alt="Сучасний 64-зрізовий SIEMENS Somatom go. Up" onerror="this.src='fallback.jpg'">
     </div>
 
     <footer id="footer" class="footer">
@@ -98,5 +102,3 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="main.js"></script>
-</body>
-</html>

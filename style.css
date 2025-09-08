@@ -7,8 +7,8 @@
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     text-align: center;
-    background: #f8f9fa;
-    color: #333;
+    background: #F5F7F2;
+    color: #4A6A54;
     overflow-x: hidden;
     line-height: 1.7;
     min-height: 100vh;
@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+    background: linear-gradient(135deg, #5C8263, #A3D08E);
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -43,7 +43,7 @@ header {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
+    border: 3px solid #F5F7F2;
     transition: transform 0.3s ease;
 }
 
@@ -54,7 +54,7 @@ header {
 .logo-text {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: #F5F7F2;
 }
 
 .logo-subtitle {
@@ -76,7 +76,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #F5F7F2;
     font-weight: 700;
     padding: 10px 20px;
     border-radius: 8px;
@@ -85,16 +85,16 @@ nav a {
 }
 
 nav a:hover {
-    background: #e74c3c;
-    color: #fff;
+    background: #8DB875;
+    color: #F5F7F2;
     transform: scale(1.05);
 }
 
 .contact-info {
     font-size: 1.1em;
-    color: #fff;
+    color: #F5F7F2;
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(245, 247, 242, 0.1);
     padding: 10px 20px;
     border-radius: 8px;
     text-align: right;
@@ -134,7 +134,7 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #F5F7F2;
     padding: 15px 25px;
     border-radius: 10px;
     font-size: 1.5em;
@@ -152,22 +152,22 @@ nav a:hover {
     margin: 0 5px;
     display: inline-block;
     border-radius: 50%;
-    background-color: #bbb;
+    background-color: #ECE7D9;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .dot.active {
-    background-color: #717171;
+    background-color: #D1E7D0;
 }
 
 .dot:hover, .dot.active {
-    background: #2ecc71;
+    background: #C1E0B1;
     transform: scale(1.4);
 }
 
 .center-description {
-    background: #e8ecef;
+    background: #DDE8D4;
     padding: 40px;
     margin: 40px auto;
     border-radius: 25px;
@@ -177,14 +177,14 @@ nav a:hover {
 
 .center-description h2 {
     font-size: 2.2em;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px #3498db;
+    color: #5C8263;
+    text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 15px;
 }
 
 .center-description p {
     font-size: 1.2em;
-    color: #555;
+    color: #7BAE63;
     margin-bottom: 20px;
 }
 
@@ -192,15 +192,15 @@ nav a:hover {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: #3498db;
-    color: #fff;
+    background: #A3D08E;
+    color: #F5F7F2;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #e74c3c;
+    background: #8DB875;
     transform: scale(1.05);
 }
 
@@ -216,7 +216,7 @@ nav a:hover {
 
 .stat-item {
     font-size: 1.5em;
-    color: #2c3e50;
+    color: #5C8263;
     font-weight: 700;
 }
 
@@ -228,8 +228,8 @@ nav a:hover {
 
 .services h2 {
     font-size: 2.2em;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px #3498db;
+    color: #5C8263;
+    text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
@@ -242,7 +242,7 @@ nav a:hover {
 }
 
 .service-card {
-    background: #fff;
+    background: #ECE7D9;
     width: 320px;
     height: 380px;
     border-radius: 20px;
@@ -254,12 +254,12 @@ nav a:hover {
     justify-content: space-between;
     padding: 25px;
     text-decoration: none;
-    color: #333;
+    color: #4A6A54;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 8px 20px rgba(141, 184, 117, 0.3);
 }
 
 .service-card img {
@@ -270,7 +270,7 @@ nav a:hover {
 
 .service-card h3 {
     font-size: 1.5em;
-    color: #2c3e50;
+    color: #5C8263;
     margin-bottom: 20px;
 }
 
@@ -282,15 +282,15 @@ nav a:hover {
 
 .advantages h2 {
     font-size: 2.2em;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px #2ecc71;
+    color: #5C8263;
+    text-shadow: 1px 1px 2px #A3D08E;
     margin-bottom: 25px;
 }
 
 .advantage-list {
     list-style: none;
     font-size: 1.2em;
-    color: #34495e;
+    color: #7BAE63;
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
@@ -304,13 +304,13 @@ nav a:hover {
 
 .advantage-list li::before {
     content: '•';
-    color: #3498db;
+    color: #8DB875;
     position: absolute;
     left: 0;
 }
 
 .advantage-list li a {
-    color: #3498db;
+    color: #A3D08E;
     text-decoration: none;
 }
 
@@ -326,14 +326,14 @@ nav a:hover {
 
 .mrt h2 {
     font-size: 2.2em;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px #3498db;
+    color: #5C8263;
+    text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
 .mrt p {
     font-size: 1.2em;
-    color: #555;
+    color: #7BAE63;
     margin-bottom: 20px;
 }
 
@@ -348,7 +348,7 @@ nav a:hover {
 .equipment-list {
     list-style: none;
     font-size: 1.2em;
-    color: #34495e;
+    color: #7BAE63;
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
@@ -362,7 +362,7 @@ nav a:hover {
 
 .equipment-list li::before {
     content: '✓';
-    color: #2ecc71;
+    color: #A3D08E;
     position: absolute;
     left: 0;
 }
@@ -375,20 +375,20 @@ nav a:hover {
 
 .price h2 {
     font-size: 2.2em;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px #3498db;
+    color: #5C8263;
+    text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
 .price h3 {
     font-size: 1.8em;
-    color: #2c3e50;
+    color: #5C8263;
     margin: 30px 0 15px;
     cursor: pointer;
     position: relative;
     transition: color 0.3s ease;
     padding: 10px 20px;
-    background: #e8ecef;
+    background: #D1E7D0;
     border-radius: 8px;
 }
 
@@ -406,16 +406,16 @@ nav a:hover {
 
 .price h4 {
     font-size: 1.4em;
-    color: #34495e;
+    color: #7BAE63;
     margin: 20px 0 10px;
     padding-left: 20px;
 }
 
 .price-note {
     font-size: 1.1em;
-    color: #555;
+    color: #7BAE63;
     margin-bottom: 20px;
-    background: #e8ecef;
+    background: #D1E7D0;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -425,7 +425,7 @@ nav a:hover {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background: #fff;
+    background: #ECE7D9;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -440,12 +440,12 @@ nav a:hover {
 .price-table th, .price-table td {
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #DDE8D4;
 }
 
 .price-table th {
-    background: linear-gradient(135deg, #3498db, #2ecc71);
-    color: #fff;
+    background: linear-gradient(135deg, #A3D08E, #8DB875);
+    color: #F5F7F2;
     font-weight: 700;
 }
 
@@ -454,18 +454,18 @@ nav a:hover {
 }
 
 .price-table tbody tr:hover {
-    background: #f1faff;
+    background: #E8F0E3;
 }
 
 .price-table tbody tr:nth-child(even) {
-    background: #f8f9fa;
+    background: #F5F7F2;
 }
 
 .price-contact {
     font-size: 1.2em;
-    color: #555;
+    color: #7BAE63;
     margin-top: 30px;
-    background: #e8ecef;
+    background: #D1E7D0;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -479,13 +479,13 @@ nav a:hover {
 
 .doctors h2 {
     font-size: 2.2em;
-    color: #2c3e50;
-    text-shadow: 1px 1px 2px #3498db;
+    color: #5C8263;
+    text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
 .doctor-card {
-    background: #fff;
+    background: #ECE7D9;
     width: 300px;
     padding: 20px;
     border-radius: 15px;
@@ -497,7 +497,7 @@ nav a:hover {
 
 .doctor-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 8px 20px rgba(141, 184, 117, 0.3);
 }
 
 .doctor-card img {
@@ -510,19 +510,19 @@ nav a:hover {
 
 .doctor-card h3 {
     font-size: 1.5em;
-    color: #2c3e50;
+    color: #5C8263;
     margin-bottom: 10px;
 }
 
 .doctor-card p {
     font-size: 1.1em;
-    color: #555;
+    color: #7BAE63;
     margin-bottom: 10px;
 }
 
 .doctor-card .specialty {
     font-weight: 600;
-    color: #3498db;
+    color: #A3D08E;
 }
 
 .doctors-grid {
@@ -537,7 +537,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 40px auto;
     overflow: hidden;
-    background: linear-gradient(135deg, #f0f4f8, #e9ecef);
+    background: linear-gradient(135deg, #E8F0E3, #DDE8D4);
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -556,7 +556,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(245, 247, 242, 0.9);
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -583,15 +583,15 @@ nav a:hover {
 
 .equipment-info h3 {
     font-size: 2em;
-    color: #2c3e50;
+    color: #5C8263;
     margin-bottom: 15px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(52, 152, 219, 0.3);
+    text-shadow: 1px 1px 2px rgba(141, 184, 117, 0.3);
 }
 
 .equipment-info p {
     font-size: 1.2em;
-    color: #666;
+    color: #7BAE63;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
@@ -602,8 +602,8 @@ nav a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(52, 152, 219, 0.8);
-    color: #fff;
+    background: rgba(163, 208, 142, 0.8);
+    color: #F5F7F2;
     border: none;
     padding: 15px;
     cursor: pointer;
@@ -615,7 +615,7 @@ nav a:hover {
 }
 
 .arrow:hover {
-    background: #e74c3c;
+    background: #8DB875;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -628,14 +628,14 @@ nav a:hover {
 }
 
 .arrow:focus {
-    box-shadow: 0 0 5px rgba(113, 113, 245, 0.7);
-    background: #e74c3c;
+    box-shadow: 0 0 5px rgba(141, 184, 117, 0.7);
+    background: #8DB875;
 }
 
 footer {
-    background: linear-gradient(135deg, #34495e, #2c3e50);
+    background: linear-gradient(135deg, #7BAE63, #4A6A54);
     padding: 50px 40px;
-    color: #fff;
+    color: #F5F7F2;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
     margin-top: auto;
 }
@@ -645,10 +645,9 @@ footer {
     max-width: 450px;
     margin-bottom: 20px;
 }
-
 .map {
     width: 100%;
-    height: 300px;
+    height: 300px; /* or 400px as in your ct.html */
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #fff;
@@ -659,7 +658,12 @@ footer {
 .map:hover {
     transform: scale(1.03);
 }
-
+.ct-machine {
+    width: 400px;
+}
+.mrt-machine {
+    width: 400px;
+}
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -681,12 +685,12 @@ footer {
     border-radius: 50%;
     object-fit: contain;
     transition: all 0.3s ease;
-    border: 2px solid #fff;
+    border: 2px solid #F5F7F2;
 }
 
 .footer-socials .social img:hover {
     transform: scale(1.15);
-    box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+    box-shadow: 0 0 15px rgba(141, 184, 117, 0.5);
 }
 
 .footer-contacts {
@@ -700,7 +704,7 @@ footer {
 
 .schedule {
     font-size: 1.1em;
-    color: #d5d5d5;
+    color: #DDE8D4;
 }
 
 @media (max-width: 768px) {
@@ -774,7 +778,7 @@ footer {
         max-width: 300px;
     }
     .doctor-card img {
-        height: 150px;
+        height: 250px;
     }
     footer {
         padding: 30px 20px;
@@ -825,7 +829,7 @@ footer {
 .slideshow .slide.fade-in .slide-caption {
     animation: captionSlide 1s ease forwards;
 }
-/* --- Планшеты (макс. ширина 1024px) --- */
+
 @media (max-width: 1024px) {
     header {
         padding: 15px 30px;
@@ -853,7 +857,6 @@ footer {
     }
 }
 
-/* --- Смартфоны (макс. ширина 600px) --- */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -931,7 +934,6 @@ footer {
     }
 }
 
-/* --- Маленькие смартфоны (макс. ширина 480px) --- */
 @media (max-width: 480px) {
     nav a {
         padding: 6px 10px;
@@ -962,8 +964,9 @@ footer {
         height: 45px;
     }
 }
+
 #map {
-  width: 100%;
-  height: 400px; /* или сколько нужно */
-  border-radius: 10px;
+    width: 100% !important;
+    height: 400px !important;
+    border-radius: 10px !important;
 }
