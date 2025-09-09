@@ -252,7 +252,7 @@ nav a:hover {
 }
 
 .service-card {
-    background: #ECE7D9;
+    background: #FFFFFF;
     width: 320px;
     height: 380px;
     border-radius: 20px;
@@ -547,7 +547,7 @@ nav a:hover {
 
 .doctor-card .specialty {
     font-weight: 600;
-    color: #A3D08E;
+    color: #687261;
 }
 
 .doctors-grid {

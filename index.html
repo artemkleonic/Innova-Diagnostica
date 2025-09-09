@@ -3,13 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Іннова Діагностика</title>
+    <title>Іннова Діагностика - Сучасний Діагностичний Центр в Одесі</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Іннова Діагностика - сучасний діагностичний центр в Одесі. Пропонуємо КТ, МРТ, досвідчених лікарів та сучасне обладнання. Запишіться на обстеження!">
+    <meta name="keywords" content="діагностика Одеса, КТ Одеса, МРТ Одеса, комп'ютерна томографія, магнітно-резонансна томографія, медичний центр">
+    <meta name="author" content="Innova Diagnostica">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Іннова Діагностика - Сучасний Діагностичний Центр в Одесі">
+    <meta property="og:description" content="Іннова Діагностика - ваш вибір для точної діагностики в Одесі. КТ, МРТ та кваліфіковані спеціалісти на вашій стороні.">
+    <meta property="og:image" content="https://yourwebsite.com/logo.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Іннова Діагностика - Сучасний Діагностичний Центр в Одесі">
+    <meta name="twitter:description" content="Іннова Діагностика - ваш вибір для точної діагностики в Одесі. КТ, МРТ та кваліфіковані спеціалісти на вашій стороні.">
+    <meta name="twitter:image" content="https://yourwebsite.com/logo.png">
+
+    <!-- Structured Data (JSON-LD) for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "Іннова Діагностика",
+        "image": "https://yourwebsite.com/logo.png",
+        "@id": "https://yourwebsite.com/#medicalclinic",
+        "url": "https://yourwebsite.com",
+        "telephone": "+380800757500",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Велика Арнаутська, 2А",
+            "addressLocality": "Одеса",
+            "addressCountry": "UA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.47120,
+            "longitude": 30.75300
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "08:30",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:30",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "00:00",
+                "closes": "00:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/innova_diagnostica",
+            "https://www.facebook.com/InnovaDiagnostica"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Existing HTML content remains the same -->
     <header class="header">
         <div class="header-content">
             <div class="logo-container">
@@ -38,15 +114,15 @@
 
     <div class="slideshow" id="slideshow">
         <div class="slide fade-in">
-            <img src="33.jpg" alt="Slide 1" onerror="this.src='fallback.jpg'">
+            <img src="33.jpg" alt="Slide 1 - Експертний рівень діагностики" onerror="this.src='fallback.jpg'">
             <div class="slide-caption">Експертний рівень</div>
         </div>
         <div class="slide">
-            <img src="41.jpg" alt="Slide 2" onerror="this.src='fallback.jpg'">
+            <img src="41.jpg" alt="Slide 2 - Весь спектр КТ і МРТ досліджень" onerror="this.src='fallback.jpg'">
             <div class="slide-caption">Весь спектр КТ і МРТ досліджень</div>
         </div>
         <div class="slide">
-            <img src="IMG_2231.jpeg" alt="Slide 3" onerror="this.src='fallback.jpg'">
+            <img src="IMG_2231.jpeg" alt="Slide 3 - Індивідуальний підхід до клієнтів" onerror="this.src='fallback.jpg'">
             <div class="slide-caption">Індивідуальний підхід</div>
         </div>
         <div class="dots">
@@ -58,7 +134,7 @@
 
     <div class="center-description">
         <h2>Про нас</h2>
-        <p>Іннова Діагностика – це сучасний діагностичний центр в Одесі, оснащений найновішим обладнанням для комп'ютерної та магнітно-резонансної томографії. Наші фахівці забезпечують точну діагностику та індивідуальний підхід до кожного клієнта.</p>
+        <p>Іннова Діагностика – це сучасний діагностичний центр в Одесі, оснащений найновішим обладнанням для комп'ютерної та магнітно-резонансної томографії. Наші фахівці забезпечують точну діагностику та індивідуальний підхід до кожного клієнта. <a href="about.html">Дізнайтесь більше</a>.</p>
         <a href="about.html" class="btn">Детальніше</a>
     </div>
 
@@ -72,11 +148,11 @@
         <h2>Наші послуги</h2>
         <div class="service-cards">
             <a href="ct.html" class="service-card">
-                <img src="ct-machine.jpg" alt="CT Scan Icon" onerror="this.src='fallback.jpg'">
+                <img src="ct-machine.jpg" alt="Комп'ютерна томографія в Одесі" onerror="this.src='fallback.jpg'">
                 <h3>Комп'ютерна томографія</h3>
             </a>
             <a href="mrt.html" class="service-card">
-                <img src="mrt.jpg" alt="MRI Icon" onerror="this.src='fallback.jpg'">
+                <img src="mrt.jpg" alt="Магнітно-резонансна томографія в Одесі" onerror="this.src='fallback.jpg'">
                 <h3>МРТ</h3>
             </a>
         </div>
@@ -90,7 +166,7 @@
                 <li><a href="#equipment">Сучасне обладнання</a> - високоточна апаратура для найдетальнішої діагностики.</li>
                 <li><a href="about.html">Швидкість дослідження</a> - найновіша технологія Deep Resolve, збільшення швидкості у 1.5 - 2 рази.</li>
                 <li><a href="about.html">Якість зображення</a> - з технологією Deep Resolve збільшилась різкість і контрастність зображення.</li>
-                <li><a href="about.html">Індивідуальний підхід</a> - максимальна увага до потреб кожного пацієнта.</li>
+                <li><a href="about.html">Індивидуальний підхід</a> - максимальна увага до потреб кожного пацієнта.</li>
                 <li><a href="#footer">Зручне розташування</a> - центр у самому серці Одеси.</li>
             </ul>
         </div>
@@ -100,22 +176,22 @@
         <button class="arrow left" aria-label="Previous slide" tabindex="0">❮</button>
         <div id="equipment-slider" class="slider-wrapper">
             <div class="equipment-slide">
-                <img src="mrt.jpg" alt="Магнітно-резонансна томографія" onerror="this.src='fallback.jpg'">
+                <img src="mrt.jpg" alt="Магнітно-резонансна томографія в Одесі" onerror="this.src='fallback.jpg'">
                 <div class="equipment-info">
                     <h3>Магнітно-резонансна томографія (МРТ)</h3>
                     <p>Метод дослідження внутрішніх органів за допомогою магнітного поля та радіохвиль...</p>
                 </div>
             </div>
             <div class="equipment-slide">
-                <img src="ct-machine.jpg" alt="Комп'ютерна томографія" onerror="this.src='fallback.jpg'">
+                <img src="ct-machine.jpg" alt="Комп'ютерна томографія в Одесі" onerror="this.src='fallback.jpg'">
                 <div class="equipment-info">
                     <h3>Комп'ютерна томографія (КТ)</h3>
                     <p>Високоточний метод рентгенологічного дослідження...</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <button class="arrow right" aria-label="Next slide" tabindex="0">❯</button>
-    </div> -->
+    </div>
 
     <footer id="footer" class="footer">
         <div class="footer-container">
@@ -148,11 +224,6 @@
                 <div class="footer-contacts">
                     <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
                     <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
-                    <div class="schedule">
-                        Графік роботи:<br>
-                        Пн-Пт: 08:30 - 20:00<br>
-                        Сб: 08:30 - 18:00
-                    </div>
                 </div>
             </div>
         </div>

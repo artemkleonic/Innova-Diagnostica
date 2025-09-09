@@ -3,11 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лікарі - Іннова Діагностика</title>
+    <title>Лікарі - Іннова Діагностика | Спеціалісти КТ та МРТ в Одесі</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"> <!-- Add this line -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Зустрічайте команду Іннова Діагностика в Одесі: Таха Маріо, Мартинюк М.В., Полюхович А.А., Котлярова М.О., Бондар Е.Л., Агій В.І., Руденко К.О., Курилов Д.І., Кочкарьов О.В., Геращенко М., Шеін Д., Немировська І., Гроздєва А., Рексіна І., Лях Н., Гоманюк Н., Талужнянська А., Скліфасовська К., Лашук С., Веретеннікова Т., Антонова І., Квашук Т. Запишіться!">
+    <meta name="keywords" content="лікарі КТ Одеса, лікарі МРТ Одеса, Таха Маріо, Мартинюк Михайло Валерійович, Полюхович Альона Анатоліївна, Котлярова Марина Олександрівна, Бондар Елеонора Леонідівна, Агій Владислава Іванівна, Руденко Костянтин Олегович, Курилов Дмитро Ігорович, Кочкарьов Олексій Вікторович, Геращенко Марія, Шеін Дар'я, Немировська Ірина, Гроздєва Анжела, Рексіна Ірина, Лях Наталія, Гоманюк Наталія, Талужнянська Альона, Скліфасовська Катерина, Лашук Сергій, Веретеннікова Тетяна, Антонова Інна, Квашук Тамара, радіологи Одеса, діагностика спеціалісти">
+    <meta name="author" content="Innova Diagnostica">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Лікарі - Іннова Діагностика | Спеціалісти КТ та МРТ в Одесі">
+    <meta property="og:description" content="Дізнайтесь про команду Іннова Діагностика: Таха Маріо, Мартинюк М.В., Полюхович А.А., Котлярова М.О., Бондар Е.Л., Агій В.І., Руденко К.О., Курилов Д.І., Кочкарьов О.В., Геращенко М., Шеін Д., Немировська І., Гроздєва А., Рексіна І., Лях Н., Гоманюк Н., Талужнянська А., Скліфасовська К., Лашук С., Веретеннікова Т., Антонова І., Квашук Т.">
+    <meta property="og:image" content="https://yourwebsite.com/doctors-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/doctors.html">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="uk_UA">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Лікарі - Іннова Діагностика | Спеціалісти КТ та МРТ в Одесі">
+    <meta name="twitter:description" content="Дізнайтесь про команду Іннова Діагностика: Таха Маріо, Мартинюк М.В., Полюхович А.А., Котлярова М.О., Бондар Е.Л., Агій В.І., Руденко К.О., Курилов Д.І., Кочкарьов О.В., Геращенко М., Шеін Д., Немировська І., Гроздєва А., Рексіна І., Лях Н., Гоманюк Н., Талужнянська А., Скліфасовська К., Лашук С., Веретеннікова Т., Антонова І., Квашук Т.">
+    <meta name="twitter:image" content="https://yourwebsite.com/doctors-image.jpg">
+
+    <!-- Structured Data (JSON-LD) for Medical Staff -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Іннова Діагностика",
+        "url": "https://yourwebsite.com",
+        "telephone": "+380800757500",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Велика Арнаутська, 2А",
+            "addressLocality": "Одеса",
+            "addressCountry": "UA"
+        },
+        "medicalSpecialty": "Radiology",
+        "healthcareProfessional": [
+            {
+                "@type": "Person",
+                "name": "Таха Маріо",
+                "jobTitle": "Директор центру, лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Мартинюк Михайло Валерійович",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Полюхович Альона Анатоліївна",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Котлярова Марина Олександрівна",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Бондар Елеонора Леонідівна",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Агій Владислава Іванівна",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Руденко Костянтин Олегович",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Курилов Дмитро Ігорович",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Кочкарьов Олексій Вікторович",
+                "jobTitle": "Лікар-радіолог"
+            },
+            {
+                "@type": "Person",
+                "name": "Геращенко Марія",
+                "jobTitle": "Лікар-інтерн, медсестра кабінету КТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Шеін Дар'я",
+                "jobTitle": "Медична сестра"
+            },
+            {
+                "@type": "Person",
+                "name": "Немировська Ірина",
+                "jobTitle": "Лаборант кабінету МРТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Гроздєва Анжела",
+                "jobTitle": "Лаборант кабінету МРТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Рексіна Ірина",
+                "jobTitle": "Лаборант кабінету МРТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Лях Наталія",
+                "jobTitle": "Медична сестра, лаборант кабінету МРТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Гоманюк Наталія",
+                "jobTitle": "Медична сестра, лаборант кабінету КТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Талужнянська Альона",
+                "jobTitle": "Лаборант кабінету КТ"
+            },
+            {
+                "@type": "Person",
+                "name": "Скліфасовська Катерина",
+                "jobTitle": "Адміністратор діагностичного центру"
+            },
+            {
+                "@type": "Person",
+                "name": "Лашук Сергій",
+                "jobTitle": "Медичний представник діагностичного центру"
+            },
+            {
+                "@type": "Person",
+                "name": "Веретеннікова Тетяна",
+                "jobTitle": "Адміністратор діагностичного центру"
+            },
+            {
+                "@type": "Person",
+                "name": "Антонова Інна",
+                "jobTitle": "Адміністратор діагностичного центру"
+            },
+            {
+                "@type": "Person",
+                "name": "Квашук Тамара",
+                "jobTitle": "Адміністратор діагностичного центру"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -36,50 +187,50 @@
     </header>
 
     <div class="doctors">
-        <h2>Лікарі</h2>
+        <h1>Лікарі - Іннова Діагностика | Професійна команда радіологів в Одесі</h1>
         <div class="doctors-grid">
             <div class="doctor-card">
-                <img src="doctors/taha-mario.jpg" alt="Таха Маріо" onerror="this.src='fallback.jpg'">
+                <img src="doctors/taha-mario.jpg" alt="Таха Маріо - Директор центру, лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Таха Маріо</h3>
                 <p class="specialty">Директор центру, лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/vartynuk-m-v.jpg" alt="Мартинюк Михайло Валерійович" onerror="this.src='fallback.jpg'">
+                <img src="doctors/vartynuk-m-v.jpg" alt="Мартинюк Михайло Валерійович - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Мартинюк Михайло Валерійович</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/poluhovich-a-a.jpg" alt="Полюхович Альона Анатоліївна" onerror="this.src='fallback.jpg'">
+                <img src="doctors/poluhovich-a-a.jpg" alt="Полюхович Альона Анатоліївна - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Полюхович Альона Анатоліївна</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/kotlyarova-m-o.jpg" alt="Котлярова Марина Олександрівна" onerror="this.src='fallback.jpg'">
+                <img src="doctors/kotlyarova-m-o.jpg" alt="Котлярова Марина Олександрівна - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Котлярова Марина Олександрівна</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/bondar-e-l.jpg" alt="Бондар Елеонора Леонідівна" onerror="this.src='fallback.jpg'">
+                <img src="doctors/bondar-e-l.jpg" alt="Бондар Елеонора Леонідівна - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Бондар Елеонора Леонідівна</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctor6.jpg" alt="Агій Владислава Іванівна" onerror="this.src='fallback.jpg'">
+                <img src="doctor6.jpg" alt="Агій Владислава Іванівна - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Агій Владислава Іванівна</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctor7.jpg" alt="Руденко Костянтин Олегович" onerror="this.src='fallback.jpg'">
+                <img src="doctor7.jpg" alt="Руденко Костянтин Олегович - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Руденко Костянтин Олегович</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctor8.jpg" alt="Курилов Дмитро Ігорович" onerror="this.src='fallback.jpg'">
+                <img src="doctor8.jpg" alt="Курилов Дмитро Ігорович - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Курилов Дмитро Ігорович</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
             <div class="doctor-card">
-                <img src="doctor9.jpg" alt="Кочкарьов Олексій Вікторович" onerror="this.src='fallback.jpg'">
+                <img src="doctor9.jpg" alt="Кочкарьов Олексій Вікторович - Лікар-радіолог" onerror="this.src='fallback.jpg'">
                 <h3>Кочкарьов Олексій Вікторович</h3>
                 <p class="specialty">Лікар-радіолог</p>
             </div>
@@ -88,42 +239,42 @@
         <h2 style="margin-top: 40px;">Лаборанти та медсестри</h2>
         <div class="doctors-grid">
             <div class="doctor-card">
-                <img src="doctors/gerashenko-m.jpg" alt="Марія Геращенко" onerror="this.src='fallback.jpg'">
+                <img src="doctors/gerashenko-m.jpg" alt="Геращенко Марія - Лікар-інтерн, медсестра кабінету КТ" onerror="this.src='fallback.jpg'">
                 <h3>Марія Геращенко</h3>
                 <p class="specialty">Лікар-інтерн, медсестра кабінету КТ</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/shein-d.jpg" alt="Дар'я Шеін" onerror="this.src='fallback.jpg'">
+                <img src="doctors/shein-d.jpg" alt="Шеін Дар'я - Медична сестра" onerror="this.src='fallback.jpg'">
                 <h3>Дар'я Шеін</h3>
                 <p class="specialty">Медична сестра</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/nemyrovska-i.jpg" alt="Ірина Немировська" onerror="this.src='fallback.jpg'">
+                <img src="doctors/nemyrovska-i.jpg" alt="Немировська Ірина - Лаборант кабінету МРТ" onerror="this.src='fallback.jpg'">
                 <h3>Ірина Немировська</h3>
                 <p class="specialty">Лаборант кабінету МРТ</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/grozdeva-a.jpg" alt="Анжела Гроздєва" onerror="this.src='fallback.jpg'">
+                <img src="doctors/grozdeva-a.jpg" alt="Гроздєва Анжела - Лаборант кабінету МРТ" onerror="this.src='fallback.jpg'">
                 <h3>Анжела Гроздєва</h3>
                 <p class="specialty">Лаборант кабінету МРТ</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/reksina-i.jpg" alt="Ірина Рексіна" onerror="this.src='fallback.jpg'">
+                <img src="doctors/reksina-i.jpg" alt="Рексіна Ірина - Лаборант кабінету МРТ" onerror="this.src='fallback.jpg'">
                 <h3>Ірина Рексіна</h3>
                 <p class="specialty">Лаборант кабінету МРТ</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/lyah-n.jpg" alt="Наталія Лях" onerror="this.src='fallback.jpg'">
+                <img src="doctors/lyah-n.jpg" alt="Лях Наталія - Медична сестра, лаборант кабінету МРТ" onerror="this.src='fallback.jpg'">
                 <h3>Наталія Лях</h3>
                 <p class="specialty">Медична сестра, лаборант кабінету МРТ</p>
             </div>
             <div class="doctor-card">
-                <img src="doctors/gomanuk-n.jpg" alt="Наталія Гоманюк" onerror="this.src='fallback.jpg'">
+                <img src="doctors/gomanuk-n.jpg" alt="Гоманюк Наталія - Медична сестра, лаборант кабінету КТ" onerror="this.src='fallback.jpg'">
                 <h3>Наталія Гоманюк</h3>
                 <p class="specialty">Медична сестра, лаборант кабінету КТ</p>
             </div>
             <div class="doctor-card">
-                <img src="staff8.jpg" alt="Альона Талужнянська" onerror="this.src='fallback.jpg'">
+                <img src="staff8.jpg" alt="Талужнянська Альона - Лаборант кабінету КТ" onerror="this.src='fallback.jpg'">
                 <h3>Альона Талужнянська</h3>
                 <p class="specialty">Лаборант кабінету КТ</p>
             </div>
@@ -132,31 +283,33 @@
         <h2 style="margin-top: 40px;">Адміністратори та представники</h2>
         <div class="doctors-grid">
             <div class="doctor-card">
-                <img src="doctors/sklifasovska-k.jpg" alt="Катерина Скліфасовська" onerror="this.src='fallback.jpg'">
+                <img src="doctors/sklifasovska-k.jpg" alt="Скліфасовська Катерина - Адміністратор діагностичного центру" onerror="this.src='fallback.jpg'">
                 <h3>Катерина Скліфасовська</h3>
                 <p class="specialty">Адміністратор діагностичного центру</p>
             </div>
             <div class="doctor-card">
-                <img src="admin2.jpg" alt="Сергій Лашук" onerror="this.src='fallback.jpg'">
+                <img src="admin2.jpg" alt="Лашук Сергій - Медичний представник діагностичного центру" onerror="this.src='fallback.jpg'">
                 <h3>Сергій Лашук</h3>
                 <p class="specialty">Медичний представник діагностичного центру</p>
             </div>
             <div class="doctor-card">
-                <img src="admin3.jpg" alt="Тетяна Веретеннікова" onerror="this.src='fallback.jpg'">
+                <img src="admin3.jpg" alt="Веретеннікова Тетяна - Адміністратор діагностичного центру" onerror="this.src='fallback.jpg'">
                 <h3>Тетяна Веретеннікова</h3>
                 <p class="specialty">Адміністратор діагностичного центру</p>
             </div>
             <div class="doctor-card">
-                <img src="admin4.jpg" alt="Інна Антонова" onerror="this.src='fallback.jpg'">
+                <img src="admin4.jpg" alt="Антонова Інна - Адміністратор діагностичного центру" onerror="this.src='fallback.jpg'">
                 <h3>Інна Антонова</h3>
                 <p class="specialty">Адміністратор діагностичного центру</p>
             </div>
             <div class="doctor-card">
-                <img src="admin5.jpg" alt="Тамара Квашук" onerror="this.src='fallback.jpg'">
+                <img src="admin5.jpg" alt="Квашук Тамара - Адміністратор діагностичного центру" onerror="this.src='fallback.jpg'">
                 <h3>Тамара Квашук</h3>
                 <p class="specialty">Адміністратор діагностичного центру</p>
             </div>
         </div>
+
+        <p class="doctors-contact">Запишіться на консультацію з нашими спеціалістами за телефонами: <a href="tel:+380800757500">+380800757500</a>, <a href="tel:+380970693904">+380970693904</a>, <a href="tel:+380507814960">+380507814960</a> (Viber, Telegram). Перегляньте <a href="price.html">прайс</a> або дізнайтесь більше про <a href="ct.html">КТ</a> та <a href="mrt.html">МРТ</a>.</p>
     </div>
 
     <footer id="footer" class="footer">
@@ -187,12 +340,13 @@
                 </div>
             </div>
             <div class="footer-contacts">
-                <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                <p>Телефони: <a href="tel:+380800757500">+380800757500</a>, <a href="tel:+380970693904">+380970693904</a>, <a href="tel:+380507814960">+380507814960</a> (Viber, Telegram)</p>
                 <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
                 <div class="schedule">
                     Графік роботи:<br>
                     Пн-Пт: 08:30 - 20:00<br>
-                    Сб: 08:30 - 18:00
+                    Сб: 08:30 - 18:00<br>
+                    Вск: вихідний
                 </div>
             </div>
         </div>
