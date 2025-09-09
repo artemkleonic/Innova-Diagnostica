@@ -9,8 +9,8 @@ body {
     text-align: center;
     background: #FAF9E8;
     color: #323930;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden;
+    overflow-y: auto;
     line-height: 1.7;
     min-height: 100vh;
     display: flex;
@@ -25,6 +25,8 @@ header {
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+
+    top: 0;
 }
 
 .header-content {
@@ -44,7 +46,6 @@ header {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    /* border: 3px solid #F5F7F2; */
     transition: transform 0.3s ease;
 }
 
@@ -103,6 +104,10 @@ nav a:hover {
 
 .contact-info p {
     margin: 5px 0;
+}
+
+.hamburger {
+    display: none;
 }
 
 .slideshow {
@@ -307,38 +312,25 @@ nav a:hover {
     margin: 20px auto;
 }
 
-.advantage-list {
-    list-style: none;
-    font-size: 1.2em;
+.advantage-highlight {
+    font-size: 1.3em;
     color: #323930;
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
 }
 
-.advantage-list li {
+.advantage-highlight p {
     margin: 15px 0;
     padding-left: 25px;
     position: relative;
-    font-size: 1.2em;
-    color: #323930;
 }
 
-.advantage-list li::before {
-    content: '•';
+.advantage-highlight p::before {
+    content: '✓';
     color: #8DB875;
     position: absolute;
     left: 0;
-}
-
-.advantage-list li a {
-    color: #37840E;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.advantage-list li a:hover {
-    text-decoration: underline;
 }
 
 .mrt, .ct {
@@ -719,7 +711,6 @@ footer {
     border-radius: 50%;
     object-fit: contain;
     transition: all 0.3s ease;
-    /* border: 2px solid #FAFBF9; */
 }
 
 .footer-socials .social img:hover {
@@ -741,20 +732,19 @@ footer {
     color: #DDE8D4;
 }
 
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: #FAFBF9;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+.highlight-section {
+    background: #DDE8D4;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.nav.active {
-    display: flex;
+.highlight-section h4 {
+    font-size: 1.6em;
+    color: #37840E;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px #8DB875;
 }
 
 h1, h2, h3, h4 {
@@ -766,38 +756,25 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    .nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: linear-gradient(135deg, #90D95C, #59AD36, #37840E);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 20px;
-    }
-    .nav a {
-        padding: 15px;
-        text-align: center;
-    }
     header {
-        flex-direction: column;
-        gap: 20px;
         padding: 15px 20px;
     }
     .header-content {
         flex-direction: column;
         gap: 15px;
     }
-    .contact-info {
-        text-align: center;
-    }
     nav {
         flex-direction: row;
         gap: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .contact-info {
+        text-align: center;
     }
     .slideshow {
         height: 300px;
@@ -814,7 +791,7 @@ h1, h2, h3, h4 {
     .service-card img {
         height: 250px;
     }
-    .advantage-list {
+    .advantage-highlight {
         text-align: center;
     }
     .price-table {
@@ -877,7 +854,7 @@ h1, h2, h3, h4 {
     .service-card h3 {
         font-size: 1.7em;
     }
-    .advantage-list li {
+    .advantage-highlight p {
         font-size: 1.3em;
     }
     .doctor-card p {
@@ -886,45 +863,6 @@ h1, h2, h3, h4 {
     .footer-contacts p {
         font-size: 1.3em;
     }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeSlide {
-    0% {
-        opacity: 0;
-        transform: scale(1.05);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.slideshow .slide.fade-in img {
-    animation: fadeSlide 1s ease forwards;
-}
-
-@keyframes captionSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.slideshow .slide.fade-in .slide-caption {
-    animation: captionSlide 1s ease forwards;
 }
 
 @media (max-width: 1024px) {
@@ -1004,7 +942,7 @@ h1, h2, h3, h4 {
     .doctors h2 {
         font-size: 1.5em;
     }
-    .advantage-list {
+    .advantage-highlight p {
         font-size: 1em;
     }
     .mrt p {

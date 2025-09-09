@@ -37,7 +37,7 @@ function currentSlide(n) {
 
 function resetSlideInterval() {
     clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000); // 5 seconds as per request
+    slideInterval = setInterval(nextSlide, 5000); // 5 seconds
 }
 
 // --- Equipment Slider ---
@@ -60,27 +60,6 @@ function plusSlidesEquipment(n) {
     showEquipmentSlide(equipmentIndex + n);
 }
 
-// --- Hamburger Menu ---
-function initHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav');
-
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-
-        // Close menu when clicking a nav link
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
-        });
-    } else {
-        console.warn("Hamburger or nav element not found!");
-    }
-}
-
 // --- Map ---
 function initMap() {
     const mapElement = document.getElementById("map");
@@ -96,7 +75,6 @@ function initMap() {
             .bindPopup("Іннова Діагностика, м. Одеса, Велика Арнаутська, 2А")
             .openPopup();
 
-        // Ensure the map resizes correctly after loading
         setTimeout(() => {
             map.invalidateSize();
             console.log("Map size invalidated");
@@ -184,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("No equipment slides found, skipping equipment slider initialization.");
     }
 
-    initHamburgerMenu(); // Initialize hamburger menu
-    initMap(); // Initialize map
-    initAccordion(); // Initialize accordion
+    initMap();
+    initAccordion();
 });
