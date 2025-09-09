@@ -19,6 +19,7 @@
                     <span class="logo-title">ІННОВА ДІАГНОСТИКА</span>
                 </div>
             </div>
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
             <nav class="nav" role="navigation" aria-label="Main navigation">
                 <a href="index.html" tabindex="0">Головна</a>
                 <a href="price.html" tabindex="0">Прайс</a>
@@ -62,9 +63,9 @@
     </div>
 
     <div class="stats">
-        <div class="stat-item">5 000+ досліджень щороку</div>
-        <div class="stat-item">50+ спеціалізованих програм КТ та МРТ</div>
-        <div class="stat-item">15+ висококваліфікованих фахівців</div>
+        <div class="stat-item"><span class="highlight">5 000+</span> досліджень щороку</div>
+        <div class="stat-item"><span class="highlight">50+</span> спеціалізованих програм КТ та МРТ</div>
+        <div class="stat-item"><span class="highlight">15+</span> висококваліфікованих фахівців</div>
     </div>
 
     <div class="services">
@@ -81,7 +82,21 @@
         </div>
     </div>
 
-    <div class="equipment-slider">
+    <div class="advantages">
+        <h2>Наші переваги</h2>
+        <div class="advantage-slide">
+            <ul class="advantage-list">
+                <li><a href="doctors.html">Досвідчені лікарі</a> - команда фахівців регулярно проходить міжнародні навчання та стажування.</li>
+                <li><a href="#equipment">Сучасне обладнання</a> - високоточна апаратура для найдетальнішої діагностики.</li>
+                <li><a href="about.html">Швидкість дослідження</a> - найновіша технологія Deep Resolve, збільшення швидкості у 1.5 - 2 рази.</li>
+                <li><a href="about.html">Якість зображення</a> - з технологією Deep Resolve збільшилась різкість і контрастність зображення.</li>
+                <li><a href="about.html">Індивідуальний підхід</a> - максимальна увага до потреб кожного пацієнта.</li>
+                <li><a href="#footer">Зручне розташування</a> - центр у самому серці Одеси.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="equipment-slider" id="equipment">
         <button class="arrow left" aria-label="Previous slide" tabindex="0">❮</button>
         <div id="equipment-slider" class="slider-wrapper">
             <div class="equipment-slide">
@@ -100,42 +115,44 @@
             </div>
         </div>
         <button class="arrow right" aria-label="Next slide" tabindex="0">❯</button>
-    </div>
+    </div> -->
 
     <footer id="footer" class="footer">
-        <div class="footer-map">
-            <div class="map" id="map" role="region" aria-label="Location map"></div>
-        </div>
-        <div class="footer-content">
-            <div class="footer-socials">
-                <div class="social instagram">
-                    <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
-                        <img src="icons8-instagram-50.png" alt="Instagram Icon" title="Instagram" onerror="this.src='fallback.jpg'">
-                    </a>
-                </div>
-                <div class="social facebook">
-                    <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
-                        <img src="icons8-facebook-50.png" alt="Facebook Icon" title="Facebook" onerror="this.src='fallback.jpg'">
-                    </a>
-                </div>
-                <div class="social viber">
-                    <a href="viber://chat?number=+380507814960" aria-label="Viber">
-                        <img src="icons8-viber-50.png" alt="Viber Icon" title="Viber" onerror="this.src='fallback.jpg'">
-                    </a>
-                </div>
-                <div class="social telegram">
-                    <a href="https://t.me/+380507814960" aria-label="Telegram">
-                        <img src="icons8-telegram-50.png" alt="Telegram Icon" title="Telegram" onerror="this.src='fallback.jpg'">
-                    </a>
-                </div>
+        <div class="footer-container">
+            <div class="footer-map">
+                <div class="map" id="map" role="region" aria-label="Location map"></div>
             </div>
-            <div class="footer-contacts">
-                <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
-                <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
-                <div class="schedule">
-                    Графік роботи:<br>
-                    Пн-Пт: 08:30 - 20:00<br>
-                    Сб: 08:30 - 18:00
+            <div class="footer-content">
+                <div class="footer-socials">
+                    <div class="social instagram">
+                        <a href="https://www.instagram.com/innova_diagnostica?igsh=MWpvbjRidXFjaGZ2MQ==" aria-label="Instagram">
+                            <img src="icons8-instagram-50.png" alt="Instagram Icon" title="Instagram" onerror="this.src='fallback.jpg'">
+                        </a>
+                    </div>
+                    <div class="social facebook">
+                        <a href="https://www.facebook.com/InnovaDiagnostica" aria-label="Facebook">
+                            <img src="icons8-facebook-50.png" alt="Facebook Icon" title="Facebook" onerror="this.src='fallback.jpg'">
+                        </a>
+                    </div>
+                    <div class="social viber">
+                        <a href="viber://chat?number=+380507814960" aria-label="Viber">
+                            <img src="icons8-viber-50.png" alt="Viber Icon" title="Viber" onerror="this.src='fallback.jpg'">
+                        </a>
+                    </div>
+                    <div class="social telegram">
+                        <a href="https://t.me/+380507814960" aria-label="Telegram">
+                            <img src="icons8-telegram-50.png" alt="Telegram Icon" title="Telegram" onerror="this.src='fallback.jpg'">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <p>Телефони: +380800757500, +380970693904, +380507814960 (Viber, Telegram)</p>
+                    <p>Адреса: м. Одеса, Велика Арнаутська, 2А</p>
+                    <div class="schedule">
+                        Графік роботи:<br>
+                        Пн-Пт: 08:30 - 20:00<br>
+                        Сб: 08:30 - 18:00
+                    </div>
                 </div>
             </div>
         </div>

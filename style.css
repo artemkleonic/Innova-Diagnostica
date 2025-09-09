@@ -7,9 +7,10 @@
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     text-align: center;
-    background: #F5F7F2;
-    color: #4A6A54;
-    overflow-x: hidden;
+    background: #FAF9E8;
+    color: #323930;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-y: auto; /* Allow vertical scrolling */
     line-height: 1.7;
     min-height: 100vh;
     display: flex;
@@ -17,7 +18,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #5C8263, #A3D08E);
+    background: linear-gradient(135deg, #90D95C, #59AD36, #37840E);
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -43,7 +44,7 @@ header {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #F5F7F2;
+    /* border: 3px solid #F5F7F2; */
     transition: transform 0.3s ease;
 }
 
@@ -54,7 +55,7 @@ header {
 .logo-text {
     display: flex;
     flex-direction: column;
-    color: #F5F7F2;
+    color: #FAFBF9;
 }
 
 .logo-subtitle {
@@ -76,7 +77,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #F5F7F2;
+    color: #FAFBF9;
     font-weight: 700;
     padding: 10px 20px;
     border-radius: 8px;
@@ -86,13 +87,13 @@ nav a {
 
 nav a:hover {
     background: #8DB875;
-    color: #F5F7F2;
+    color: #FAFBF9;
     transform: scale(1.05);
 }
 
 .contact-info {
     font-size: 1.1em;
-    color: #F5F7F2;
+    color: #FAFBF9;
     font-weight: 600;
     background: rgba(245, 247, 242, 0.1);
     padding: 10px 20px;
@@ -126,6 +127,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: none;
 }
 
 .slide-caption {
@@ -134,10 +136,10 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.5);
-    color: #F5F7F2;
+    color: #FAFBF9;
     padding: 15px 25px;
     border-radius: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -177,14 +179,14 @@ nav a:hover {
 
 .center-description h2 {
     font-size: 2.2em;
-    color: #5C8263;
+    color: #37840E;
     text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 15px;
 }
 
 .center-description p {
     font-size: 1.2em;
-    color: #7BAE63;
+    color: #323930;
     margin-bottom: 20px;
 }
 
@@ -193,7 +195,7 @@ nav a:hover {
     margin-top: 20px;
     padding: 10px 20px;
     background: #A3D08E;
-    color: #F5F7F2;
+    color: #FAFBF9;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -216,8 +218,16 @@ nav a:hover {
 
 .stat-item {
     font-size: 1.5em;
-    color: #5C8263;
+    color: #323930;
+    font-weight: 500;
+}
+
+.highlight {
+    color: #37840E;
+    font-size: 1.8em;
     font-weight: 700;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .services {
@@ -228,7 +238,7 @@ nav a:hover {
 
 .services h2 {
     font-size: 2.2em;
-    color: #5C8263;
+    color: #37840E;
     text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
@@ -254,7 +264,7 @@ nav a:hover {
     justify-content: space-between;
     padding: 25px;
     text-decoration: none;
-    color: #4A6A54;
+    color: #323930;
 }
 
 .service-card:hover {
@@ -265,11 +275,12 @@ nav a:hover {
 .service-card img {
     height: 273px;
     object-fit: contain;
+    border: none;
 }
 
 .service-card h3 {
     font-size: 1.5em;
-    color: #5C8263;
+    color: #37840E;
     margin-bottom: 20px;
 }
 
@@ -281,15 +292,25 @@ nav a:hover {
 
 .advantages h2 {
     font-size: 2.2em;
-    color: #5C8263;
+    color: #37840E;
     text-shadow: 1px 1px 2px #A3D08E;
     margin-bottom: 25px;
+}
+
+.advantage-slide {
+    background: #DDE8D4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 .advantage-list {
     list-style: none;
     font-size: 1.2em;
-    color: #7BAE63;
+    color: #323930;
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
@@ -297,8 +318,10 @@ nav a:hover {
 
 .advantage-list li {
     margin: 15px 0;
-    padding-left: 20px;
+    padding-left: 25px;
     position: relative;
+    font-size: 1.2em;
+    color: #323930;
 }
 
 .advantage-list li::before {
@@ -309,15 +332,16 @@ nav a:hover {
 }
 
 .advantage-list li a {
-    color: #A3D08E;
+    color: #37840E;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .advantage-list li a:hover {
     text-decoration: underline;
 }
 
-.mrt {
+.mrt, .ct {
     margin: 40px auto;
     max-width: 1200px;
     padding: 40px;
@@ -325,14 +349,14 @@ nav a:hover {
 
 .mrt h2 {
     font-size: 2.2em;
-    color: #5C8263;
+    color: #37840E;
     text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
 .mrt p {
     font-size: 1.2em;
-    color: #7BAE63;
+    color: #323930;
     margin-bottom: 20px;
 }
 
@@ -347,7 +371,7 @@ nav a:hover {
 .equipment-list {
     list-style: none;
     font-size: 1.2em;
-    color: #7BAE63;
+    color: #323930;
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
@@ -374,14 +398,14 @@ nav a:hover {
 
 .price h2 {
     font-size: 2.2em;
-    color: #5C8263;
+    color: #37840E;
     text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
 .price h3 {
     font-size: 1.8em;
-    color: #5C8263;
+    color: #37840E;
     margin: 30px 0 15px;
     cursor: pointer;
     position: relative;
@@ -405,14 +429,14 @@ nav a:hover {
 
 .price h4 {
     font-size: 1.4em;
-    color: #7BAE63;
+    color: #323930;
     margin: 20px 0 10px;
     padding-left: 20px;
 }
 
 .price-note {
     font-size: 1.1em;
-    color: #7BAE63;
+    color: #323930;
     margin-bottom: 20px;
     background: #D1E7D0;
     padding: 15px;
@@ -444,7 +468,7 @@ nav a:hover {
 
 .price-table th {
     background: linear-gradient(135deg, #A3D08E, #8DB875);
-    color: #F5F7F2;
+    color: #FAFBF9;
     font-weight: 700;
 }
 
@@ -462,7 +486,7 @@ nav a:hover {
 
 .price-contact {
     font-size: 1.2em;
-    color: #7BAE63;
+    color: #323930;
     margin-top: 30px;
     background: #D1E7D0;
     padding: 15px;
@@ -471,6 +495,7 @@ nav a:hover {
 }
 
 .doctors {
+    background: #FAF9E8;
     margin: 40px auto;
     max-width: 1200px;
     padding: 40px;
@@ -478,13 +503,13 @@ nav a:hover {
 
 .doctors h2 {
     font-size: 2.2em;
-    color: #5C8263;
+    color: #37840E;
     text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
 }
 
 .doctor-card {
-    background: #ECE7D9;
+    background: #FFFFFF;
     width: 300px;
     padding: 20px;
     border-radius: 15px;
@@ -501,21 +526,22 @@ nav a:hover {
 
 .doctor-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
+    aspect-ratio: 1 / 1;
 }
 
 .doctor-card h3 {
     font-size: 1.5em;
-    color: #5C8263;
+    color: #37840E;
     margin-bottom: 10px;
 }
 
 .doctor-card p {
     font-size: 1.1em;
-    color: #7BAE63;
+    color: #323930;
     margin-bottom: 10px;
 }
 
@@ -544,12 +570,12 @@ nav a:hover {
 
 .slider-wrapper {
     display: flex;
-    width: 200%; /* Для двух слайдов */
+    width: 200%;
     transition: transform 0.6s ease-in-out;
 }
 
 .equipment-slide {
-    width: 50%; /* По 50% для каждого слайда */
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -582,7 +608,7 @@ nav a:hover {
 
 .equipment-info h3 {
     font-size: 2em;
-    color: #5C8263;
+    color: #37840E;
     margin-bottom: 15px;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(141, 184, 117, 0.3);
@@ -590,7 +616,7 @@ nav a:hover {
 
 .equipment-info p {
     font-size: 1.2em;
-    color: #7BAE63;
+    color: #323930;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
@@ -602,7 +628,7 @@ nav a:hover {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(163, 208, 142, 0.8);
-    color: #F5F7F2;
+    color: #FAFBF9;
     border: none;
     padding: 15px;
     cursor: pointer;
@@ -632,21 +658,28 @@ nav a:hover {
 }
 
 footer {
-    background: linear-gradient(135deg, #7BAE63, #4A6A54);
+    background: linear-gradient(135deg, #90D95C, #59AD36, #37840E);
     padding: 50px 40px;
-    color: #F5F7F2;
+    color: #FAFBF9;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
     margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
 }
 
 .footer-map {
     flex: 1;
     max-width: 450px;
-    margin-bottom: 20px;
 }
+
 .map {
     width: 100%;
-    height: 300px; /* or 400px as in your ct.html */
+    height: 300px;
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #fff;
@@ -657,18 +690,20 @@ footer {
 .map:hover {
     transform: scale(1.03);
 }
+
 .ct-machine {
     width: 400px;
 }
 .mrt-machine {
     width: 400px;
 }
+
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .footer-socials {
@@ -684,7 +719,7 @@ footer {
     border-radius: 50%;
     object-fit: contain;
     transition: all 0.3s ease;
-    border: 2px solid #F5F7F2;
+    /* border: 2px solid #FAFBF9; */
 }
 
 .footer-socials .social img:hover {
@@ -706,7 +741,48 @@ footer {
     color: #DDE8D4;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #FAFBF9;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.nav.active {
+    display: flex;
+}
+
+h1, h2, h3, h4 {
+    color: #37840E;
+}
+
+.header-content, .logo-text, .contact-info, nav a, .footer-contacts, .schedule {
+    color: #FAFBF9;
+}
+
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(135deg, #90D95C, #59AD36, #37840E);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+    }
+    .nav a {
+        padding: 15px;
+        text-align: center;
+    }
     header {
         flex-direction: column;
         gap: 20px;
@@ -727,7 +803,7 @@ footer {
         height: 300px;
     }
     .slide-caption {
-        font-size: 1.2em;
+        font-size: 1.4em;
         padding: 10px;
     }
     .service-card {
@@ -766,7 +842,7 @@ footer {
         font-size: 1.5em;
     }
     .equipment-info p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .arrow {
         padding: 10px;
@@ -782,11 +858,33 @@ footer {
     footer {
         padding: 30px 20px;
     }
+    .footer-container {
+        flex-direction: column;
+    }
     .footer-content {
         grid-template-columns: 1fr;
+        text-align: center;
     }
     .map {
         height: 250px;
+    }
+    body {
+        font-size: 1.1em;
+    }
+    .center-description p {
+        font-size: 1.2em;
+    }
+    .service-card h3 {
+        font-size: 1.7em;
+    }
+    .advantage-list li {
+        font-size: 1.3em;
+    }
+    .doctor-card p {
+        font-size: 1.2em;
+    }
+    .footer-contacts p {
+        font-size: 1.3em;
     }
 }
 

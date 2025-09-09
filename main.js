@@ -1,4 +1,4 @@
-// --- Основной слайдер ---
+// --- Main Slideshow ---
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slideshow .slide");
 const dots = document.querySelectorAll(".dot");
@@ -37,7 +37,7 @@ function currentSlide(n) {
 
 function resetSlideInterval() {
     clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 4000);
+    slideInterval = setInterval(nextSlide, 5000); // 5 seconds as per request
 }
 
 // --- Equipment Slider ---
@@ -52,12 +52,7 @@ function showEquipmentSlide(index) {
     }
 
     equipmentIndex = (index + equipmentSlides.length) % equipmentSlides.length;
-
-    // Calculate slide width including margins
-    const slideWidth = equipmentSlides[0].offsetWidth + 20; // 20px margin as per your CSS
-    const offset = -(equipmentIndex * slideWidth);
-
-    equipmentSlider.style.transform = `translateX(${offset}px)`;
+    equipmentSlider.style.transform = `translateX(-${equipmentIndex * 50}%)`;
     equipmentSlider.style.transition = "transform 0.6s ease-in-out";
 }
 
@@ -65,7 +60,28 @@ function plusSlidesEquipment(n) {
     showEquipmentSlide(equipmentIndex + n);
 }
 
-// --- Карта ---
+// --- Hamburger Menu ---
+function initHamburgerMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a nav link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    } else {
+        console.warn("Hamburger or nav element not found!");
+    }
+}
+
+// --- Map ---
 function initMap() {
     const mapElement = document.getElementById("map");
     if (mapElement) {
@@ -90,7 +106,7 @@ function initMap() {
     }
 }
 
-// --- Аккордеон (цены) ---
+// --- Accordion (Price) ---
 function initAccordion() {
     const headers = document.querySelectorAll(".price h3");
     headers.forEach(header => {
@@ -113,12 +129,12 @@ function initAccordion() {
     });
 }
 
-// --- Запуск ---
+// --- Initialization ---
 document.addEventListener("DOMContentLoaded", function () {
     // Slideshow
     if (slides.length > 0) {
         showSlide(slideIndex);
-        slideInterval = setInterval(nextSlide, 4000);
+        slideInterval = setInterval(nextSlide, 5000);
 
         const slideshowContainer = document.getElementById("slideshow");
         if (slideshowContainer) {
@@ -168,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("No equipment slides found, skipping equipment slider initialization.");
     }
 
+    initHamburgerMenu(); // Initialize hamburger menu
     initMap(); // Initialize map
     initAccordion(); // Initialize accordion
 });
