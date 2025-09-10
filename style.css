@@ -800,6 +800,7 @@ h1, h2, h3, h4 {
     }
     .service-card img {
         height: 250px;
+        width: 151px;
     }
     .advantage-highlight {
         text-align: center;
