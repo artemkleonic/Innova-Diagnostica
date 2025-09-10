@@ -2,13 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
-    
 }
+
 html {
-     overflow-x: hidden; /* запрещаем горизонтальную прокрутку */
-    overflow-y: auto;   /* разрешаем вертикальную прокрутку */
+    overflow-x: hidden; /* Забороняємо горизонтальну прокрутку */
+    overflow-y: auto;   /* Дозволяємо вертикальну прокрутку */
 }
+
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     text-align: center;
@@ -20,11 +20,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
-    
 }
+
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 header {
@@ -35,7 +34,7 @@ header {
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-
+    position: relative; /* Додано для правильного позиціонування */
     top: 0;
 }
 
@@ -43,6 +42,7 @@ header {
     display: flex;
     align-items: center;
     gap: 40px;
+    width: 100%;
 }
 
 .logo-container {
@@ -190,6 +190,7 @@ nav a:hover {
     border-radius: 25px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
+    width: 100%;
 }
 
 .center-description h2 {
@@ -229,6 +230,7 @@ nav a:hover {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .stat-item {
@@ -249,6 +251,7 @@ nav a:hover {
     margin: 40px auto;
     max-width: 1200px;
     padding: 20px;
+    width: 100%;
 }
 
 .services h2 {
@@ -288,7 +291,7 @@ nav a:hover {
 }
 
 .service-card img {
-    width: 200px; 
+    width: 200px;
     height: 273px;
     object-fit: contain;
     border: none;
@@ -304,6 +307,7 @@ nav a:hover {
     margin: 40px auto;
     max-width: 1200px;
     padding: 20px;
+    width: 100%;
 }
 
 .advantages h2 {
@@ -321,6 +325,7 @@ nav a:hover {
     text-align: left;
     max-width: 800px;
     margin: 20px auto;
+    width: 100%;
 }
 
 .advantage-highlight {
@@ -329,6 +334,7 @@ nav a:hover {
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
+    width: 100%;
 }
 
 .advantage-highlight p {
@@ -347,27 +353,31 @@ nav a:hover {
 .mrt, .ct {
     margin: 40px auto;
     max-width: 1200px;
-    padding: 40px;
+    padding: 0 20px;
+    width: 100%;
 }
 
-.mrt h2 {
+.mrt h2, .ct h2 {
     font-size: 2.2em;
     color: #37840E;
     text-shadow: 1px 1px 2px #8DB875;
     margin-bottom: 25px;
+    padding: 10px;
 }
 
-.mrt p {
+.mrt p, .ct p {
     font-size: 1.2em;
     color: #323930;
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
-.mrt img {
+.mrt img, .ct img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-top: 20px;
+    margin: 20px auto;
+    display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -378,6 +388,7 @@ nav a:hover {
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
+    width: 100%;
 }
 
 .equipment-list li {
@@ -397,6 +408,7 @@ nav a:hover {
     margin: 40px auto;
     max-width: 1200px;
     padding: 40px;
+    width: 100%;
 }
 
 .price h2 {
@@ -416,6 +428,8 @@ nav a:hover {
     padding: 10px 20px;
     background: #D1E7D0;
     border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .price h3::after {
@@ -445,6 +459,7 @@ nav a:hover {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .price-table {
@@ -454,7 +469,7 @@ nav a:hover {
     background: #ECE7D9;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: auto; /* Дозволяє прокрутку таблиць на малих екранах */
     display: none;
     animation: fadeIn 0.3s ease-in;
 }
@@ -467,6 +482,7 @@ nav a:hover {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #DDE8D4;
+    min-width: 100px; /* Мін. ширина для уникнення стискання */
 }
 
 .price-table th {
@@ -495,6 +511,7 @@ nav a:hover {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .doctors {
@@ -502,6 +519,7 @@ nav a:hover {
     margin: 40px auto;
     max-width: 1200px;
     padding: 40px;
+    width: 100%;
 }
 
 .doctors h2 {
@@ -520,6 +538,7 @@ nav a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 20px auto;
     text-align: left;
+    max-width: 100%; /* Адаптивність */
 }
 
 .doctor-card:hover {
@@ -569,6 +588,7 @@ nav a:hover {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    width: 100%;
 }
 
 .slider-wrapper {
@@ -666,6 +686,7 @@ footer {
     color: #FAFBF9;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
     margin-top: auto;
+    width: 100%;
 }
 
 .footer-container {
@@ -673,6 +694,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     gap: 30px;
+    width: 100%;
 }
 
 .footer-map {
@@ -694,11 +716,12 @@ footer {
     transform: scale(1.03);
 }
 
-.ct-machine {
-    width: 400px;
-}
-.mrt-machine {
-    width: 400px;
+.ct-machine, .mrt-machine {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
@@ -749,6 +772,7 @@ footer {
     border-radius: 15px;
     margin: 20px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .highlight-section h4 {
@@ -764,6 +788,38 @@ h1, h2, h3, h4 {
 
 .header-content, .logo-text, .contact-info, nav a, .footer-contacts, .schedule {
     color: #FAFBF9;
+}
+
+/* Медіа-запити */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+    nav {
+        gap: 20px;
+    }
+    .slideshow {
+        height: 350px;
+    }
+    .center-description h2,
+    .services h2,
+    .advantages h2,
+    .mrt h2,
+    .ct h2,
+    .price h2,
+    .doctors h2 {
+        font-size: 1.8em;
+    }
+    .service-card {
+        width: 45%;
+        height: auto;
+    }
+    .doctor-card {
+        width: 45%;
+    }
+    .equipment-slide img {
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -859,8 +915,6 @@ h1, h2, h3, h4 {
     }
     body {
         font-size: 1.1em;
-         overflow-x: hidden; /* запрещаем горизонтальную прокрутку */
-    overflow-y: auto;   /* разрешаем вертикальную прокрутку */
     }
     .center-description p {
         font-size: 1.2em;
@@ -876,33 +930,6 @@ h1, h2, h3, h4 {
     }
     .footer-contacts p {
         font-size: 1.3em;
-    }
-}
-
-@media (max-width: 1024px) {
-    header {
-        padding: 15px 30px;
-    }
-    nav {
-        gap: 20px;
-    }
-    .slideshow {
-        height: 350px;
-    }
-    .center-description h2,
-    .services h2,
-    .advantages h2,
-    .mrt h2,
-    .price h2,
-    .doctors h2 {
-        font-size: 1.8em;
-    }
-    .service-card {
-        width: 45%;
-        height: auto;
-    }
-    .doctor-card {
-        width: 45%;
     }
 }
 
@@ -952,6 +979,7 @@ h1, h2, h3, h4 {
     }
     .advantages h2,
     .mrt h2,
+    .ct h2,
     .price h2,
     .doctors h2 {
         font-size: 1.5em;
@@ -959,7 +987,7 @@ h1, h2, h3, h4 {
     .advantage-highlight p {
         font-size: 1em;
     }
-    .mrt p {
+    .mrt p, .ct p {
         font-size: 1em;
     }
     .equipment-slide img {
@@ -980,6 +1008,23 @@ h1, h2, h3, h4 {
     }
     .map {
         height: 200px;
+    }
+    .mrt h2, .ct h2 {
+        font-size: 1.3em;
+    }
+    .mrt p, .ct p {
+        font-size: 1em;
+        padding: 0 5px;
+    }
+    .ct-machine, .mrt-machine {
+        max-width: 100%;
+    }
+    .ct-contact, .price-contact {
+        font-size: 1em;
+    }
+    .equipment-list li {
+        font-size: 1em;
+        padding-left: 15px;
     }
 }
 
